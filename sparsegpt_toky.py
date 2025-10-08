@@ -1,21 +1,16 @@
 import math
 import time
-
 import torch
 import torch.nn as nn
 import transformers
-
 from quant import *
 
-
-DEBUG = False 
-
+DEBUG = False
 torch.backends.cuda.matmul.allow_tf32 = False
 torch.backends.cudnn.allow_tf32 = False
 
 
 class SparseGPT:
-
     def __init__(self, layer):
         self.layer = layer
         self.dev = self.layer.weight.device
@@ -28,14 +23,30 @@ class SparseGPT:
         self.columns = W.shape[1]
         self.H = torch.zeros((self.columns, self.columns), device=self.dev)
         self.nsamples = 0
+        self.activation_amps = None  # 新增：存储激活幅值
 
     def add_batch(self, inp, out, blocksize=1024):
+        """新增：计算并保存激活幅值（用于后续感知量化）"""
         if DEBUG:
             self.inp1 = inp
             self.out1 = out
         if len(inp.shape) == 2:
             inp = inp.unsqueeze(0)
         tmp = inp.shape[0]
+
+        # 计算激活幅值（输入特征的平均绝对值）
+        if self.activation_amps is None:
+            if len(inp.shape) == 3:
+                self.activation_amps = torch.mean(torch.abs(inp), dim=(0, 1))  # [batch, seq, feat] -> [feat]
+            else:
+                self.activation_amps = torch.mean(torch.abs(inp), dim=0)  # [batch, feat] -> [feat]
+        else:
+            if len(inp.shape) == 3:
+                self.activation_amps = 0.5 * self.activation_amps + 0.5 * torch.mean(torch.abs(inp), dim=(0, 1))
+            else:
+                self.activation_amps = 0.5 * self.activation_amps + 0.5 * torch.mean(torch.abs(inp), dim=0)
+
+        # 原有Hessian矩阵更新逻辑
         if isinstance(self.layer, nn.Linear) or isinstance(self.layer, transformers.Conv1D):
             if len(inp.shape) == 3:
                 inp = inp.reshape((-1, inp.shape[-1]))
@@ -46,7 +57,7 @@ class SparseGPT:
         self.H += inp.matmul(inp.t())
 
     def fasterprune(
-        self, sparsity, prunen=0, prunem=0, blocksize=128, percdamp=.01
+            self, sparsity, prunen=0, prunem=0, blocksize=128, percdamp=.01
     ):
         W = self.layer.weight.data.clone()
         if isinstance(self.layer, nn.Conv2d):
@@ -60,15 +71,12 @@ class SparseGPT:
                 self.quantizer.find_params(W, weight=True)
 
         tick = time.time()
-
         H = self.H
         del self.H
         dead = torch.diag(H) == 0
         H[dead, dead] = 1
         W[:, dead] = 0
-
         Losses = torch.zeros(self.rows, device=self.dev)
-
         damp = percdamp * torch.mean(torch.diag(H))
         diag = torch.arange(self.columns, device=self.dev)
         H[diag, diag] += damp
@@ -76,20 +84,26 @@ class SparseGPT:
         H = torch.cholesky_inverse(H)
         H = torch.linalg.cholesky(H, upper=True)
         Hinv = H
-
         mask = None
+
+        # 改进2：激活感知的量化精度调整
+        use_activation_aware = hasattr(self, 'quantizer') and self.activation_amps is not None
+        if use_activation_aware:
+            # 计算权重贡献度（权重×激活幅值）
+            contrib = torch.mean(torch.abs(W * self.activation_amps.unsqueeze(0)), dim=1)
+            contrib_norm = contrib / torch.mean(contrib)  # 归一化贡献度
 
         for i1 in range(0, self.columns, blocksize):
             i2 = min(i1 + blocksize, self.columns)
             count = i2 - i1
-
             W1 = W[:, i1:i2].clone()
             Q1 = torch.zeros_like(W1)
             Err1 = torch.zeros_like(W1)
             Losses1 = torch.zeros_like(W1)
             Hinv1 = Hinv[i1:i2, i1:i2]
 
-            if prunen == 0: 
+            # 剪枝掩码计算（原有逻辑）
+            if prunen == 0:
                 if mask is not None:
                     mask1 = mask[:, i1:i2]
                 else:
@@ -103,28 +117,37 @@ class SparseGPT:
                 w = W1[:, i]
                 d = Hinv1[i, i]
 
+                # N:M剪枝（原有逻辑）
                 if prunen != 0 and i % prunem == 0:
                     tmp = W1[:, i:(i + prunem)] ** 2 / (torch.diag(Hinv1)[i:(i + prunem)].reshape((1, -1))) ** 2
                     mask1.scatter_(1, i + torch.topk(tmp, prunen, dim=1, largest=False)[1], True)
 
+                # 基础剪枝
                 q = w.clone()
                 q[mask1[:, i]] = 0
 
-                if hasattr(self, 'quantizer'):
+                # 改进2：根据贡献度动态调整量化比特
+                if use_activation_aware:
+                    # 贡献度高的权重用更高比特
+                    if contrib_norm[i] > 1.2:  # 高贡献阈值
+                        self.quantizer.maxq = torch.tensor(2 ** 8 - 1, device=self.dev)  # 8bit
+                    elif contrib_norm[i] < 0.5:  # 低贡献阈值
+                        self.quantizer.maxq = torch.tensor(2 ** 2 - 1, device=self.dev)  # 2bit
+                    else:
+                        self.quantizer.maxq = torch.tensor(2 ** 4 - 1, device=self.dev)  # 4bit
+                    # 重新量化
                     q = quantize(
                         q.unsqueeze(1), self.quantizer.scale, self.quantizer.zero, self.quantizer.maxq
                     ).flatten()
 
                 Q1[:, i] = q
                 Losses1[:, i] = (w - q) ** 2 / d ** 2
-
                 err1 = (w - q) / d
                 W1[:, i:] -= err1.unsqueeze(1).matmul(Hinv1[i, i:].unsqueeze(0))
                 Err1[:, i] = err1
 
             W[:, i1:i2] = Q1
             Losses += torch.sum(Losses1, 1) / 2
-
             W[:, i2:] -= Err1.matmul(Hinv[i1:i2, i2:])
 
             if DEBUG:
@@ -148,4 +171,5 @@ class SparseGPT:
             self.inp1 = None
             self.out1 = None
         self.H = None
+        self.activation_amps = None  # 释放激活幅值缓存
         torch.cuda.empty_cache()

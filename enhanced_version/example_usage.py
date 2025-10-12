@@ -4,9 +4,14 @@
 场景：对 OPT 或 BLOOM 模型的某一层进行剪枝和混合精度量化
 """
 
+import sys
+import os
+# 添加父目录到路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import torch
 import torch.nn as nn
-from sparsegpt_enhanced import SparseGPT, QuantizationStats
+from enhanced_version.sparsegpt_enhanced import SparseGPT, QuantizationStats
 from quant import Quantizer
 
 

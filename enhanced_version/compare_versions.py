@@ -8,6 +8,11 @@
 4. 内存占用
 """
 
+import sys
+import os
+# 添加父目录到路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import torch
 import torch.nn as nn
 import time
@@ -29,7 +34,7 @@ except:
     TOKY_AVAILABLE = False
     print("⚠️ sparsegpt_toky.py 不可用")
 
-from sparsegpt_enhanced import SparseGPT as SparseGPT_Enhanced, QuantizationStats
+from enhanced_version.sparsegpt_enhanced import SparseGPT as SparseGPT_Enhanced, QuantizationStats
 from quant import Quantizer
 
 

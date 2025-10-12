@@ -7,9 +7,14 @@
 3. 对比不同比特分配方法的效果
 """
 
+import sys
+import os
+# 添加父目录到路径
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import torch
 import torch.nn as nn
-from sparsegpt_enhanced import SparseGPT, QuantizationStats
+from enhanced_version.sparsegpt_enhanced import SparseGPT, QuantizationStats
 
 
 def create_test_model():

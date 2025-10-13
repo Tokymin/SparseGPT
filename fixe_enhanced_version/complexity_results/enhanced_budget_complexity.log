@@ -8,507 +8,505 @@ Pruning with SparseGPT ...
 
 [layer0.self_attn.k_proj] 计算多维度重要性分数...
 [layer0.self_attn.k_proj] 分配量化比特数...
-[layer0.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer0.self_attn.k_proj] 时间: 1.89s | 误差: 13602.1084
+[layer0.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer0.self_attn.k_proj] 时间: 1.83s | 误差: 13602.1074
 Processing layer 0, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer0.self_attn.v_proj] 计算多维度重要性分数...
 [layer0.self_attn.v_proj] 分配量化比特数...
-[layer0.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer0.self_attn.v_proj] 时间: 1.76s | 误差: 533.1898
+[layer0.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer0.self_attn.v_proj] 时间: 2.13s | 误差: 533.1898
 Processing layer 0, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer0.self_attn.q_proj] 计算多维度重要性分数...
 [layer0.self_attn.q_proj] 分配量化比特数...
-[layer0.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer0.self_attn.q_proj] 时间: 2.24s | 误差: 13788.3301
+[layer0.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer0.self_attn.q_proj] 时间: 2.20s | 误差: 13788.3301
 Processing layer 0, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer0.self_attn.out_proj] 计算多维度重要性分数...
 [layer0.self_attn.out_proj] 分配量化比特数...
-[layer0.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer0.self_attn.out_proj] 时间: 1.72s | 误差: 6.2849
+[layer0.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer0.self_attn.out_proj] 时间: 3.86s | 误差: 6.2849
 Processing layer 0, component fc1
 Pruning with SparseGPT ...
 
 [layer0.fc1] 计算多维度重要性分数...
 [layer0.fc1] 分配量化比特数...
-[layer0.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer0.fc1] 时间: 1.56s | 误差: 2199.3691
+[layer0.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer0.fc1] 时间: 4.92s | 误差: 2199.3340
 Processing layer 0, component fc2
 Pruning with SparseGPT ...
 
 [layer0.fc2] 计算多维度重要性分数...
 [layer0.fc2] 分配量化比特数...
-[layer0.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer0.fc2] 时间: 7.75s | 误差: 34.3660
+[layer0.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer0.fc2] 时间: 8.86s | 误差: 34.3660
 Processing layer 1, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer1.self_attn.k_proj] 计算多维度重要性分数...
 [layer1.self_attn.k_proj] 分配量化比特数...
-[layer1.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer1.self_attn.k_proj] 时间: 1.66s | 误差: 9457.8184
+[layer1.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer1.self_attn.k_proj] 时间: 2.19s | 误差: 9456.9277
 Processing layer 1, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer1.self_attn.v_proj] 计算多维度重要性分数...
 [layer1.self_attn.v_proj] 分配量化比特数...
-[layer1.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer1.self_attn.v_proj] 时间: 1.64s | 误差: 624.7382
+[layer1.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer1.self_attn.v_proj] 时间: 2.21s | 误差: 624.7369
 Processing layer 1, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer1.self_attn.q_proj] 计算多维度重要性分数...
 [layer1.self_attn.q_proj] 分配量化比特数...
-[layer1.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer1.self_attn.q_proj] 时间: 2.22s | 误差: 3916.2251
+[layer1.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer1.self_attn.q_proj] 时间: 3.38s | 误差: 3916.2834
 Processing layer 1, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer1.self_attn.out_proj] 计算多维度重要性分数...
 [layer1.self_attn.out_proj] 分配量化比特数...
-[layer1.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer1.self_attn.out_proj] 时间: 1.76s | 误差: 3.9827
+[layer1.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer1.self_attn.out_proj] 时间: 3.56s | 误差: 3.9823
 Processing layer 1, component fc1
 Pruning with SparseGPT ...
 
 [layer1.fc1] 计算多维度重要性分数...
 [layer1.fc1] 分配量化比特数...
-[layer1.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer1.fc1] 时间: 1.76s | 误差: 6110.0010
+[layer1.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer1.fc1] 时间: 4.06s | 误差: 6109.9453
 Processing layer 1, component fc2
 Pruning with SparseGPT ...
 
 [layer1.fc2] 计算多维度重要性分数...
 [layer1.fc2] 分配量化比特数...
-[layer1.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer1.fc2] 时间: 7.47s | 误差: 13.3630
+[layer1.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer1.fc2] 时间: 15.71s | 误差: 13.3632
 Processing layer 2, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer2.self_attn.k_proj] 计算多维度重要性分数...
 [layer2.self_attn.k_proj] 分配量化比特数...
-[layer2.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer2.self_attn.k_proj] 时间: 2.24s | 误差: 15454.3047
+[layer2.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer2.self_attn.k_proj] 时间: 4.06s | 误差: 15455.2334
 Processing layer 2, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer2.self_attn.v_proj] 计算多维度重要性分数...
 [layer2.self_attn.v_proj] 分配量化比特数...
-[layer2.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer2.self_attn.v_proj] 时间: 1.76s | 误差: 1642.2051
+[layer2.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer2.self_attn.v_proj] 时间: 3.54s | 误差: 1641.6998
 Processing layer 2, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer2.self_attn.q_proj] 计算多维度重要性分数...
 [layer2.self_attn.q_proj] 分配量化比特数...
-[layer2.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer2.self_attn.q_proj] 时间: 1.51s | 误差: 13944.0781
+[layer2.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer2.self_attn.q_proj] 时间: 3.91s | 误差: 13944.4561
 Processing layer 2, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer2.self_attn.out_proj] 计算多维度重要性分数...
 [layer2.self_attn.out_proj] 分配量化比特数...
-[layer2.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer2.self_attn.out_proj] 时间: 2.23s | 误差: 9.4486
+[layer2.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer2.self_attn.out_proj] 时间: 4.17s | 误差: 9.4491
 Processing layer 2, component fc1
 Pruning with SparseGPT ...
 
 [layer2.fc1] 计算多维度重要性分数...
 [layer2.fc1] 分配量化比特数...
-[layer2.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer2.fc1] 时间: 1.73s | 误差: 4953.8906
+[layer2.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer2.fc1] 时间: 3.51s | 误差: 4954.1455
 Processing layer 2, component fc2
 Pruning with SparseGPT ...
 
 [layer2.fc2] 计算多维度重要性分数...
 [layer2.fc2] 分配量化比特数...
-[layer2.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer2.fc2] 时间: 7.29s | 误差: 9.8828
+[layer2.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer2.fc2] 时间: 15.56s | 误差: 9.8810
 Processing layer 3, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer3.self_attn.k_proj] 计算多维度重要性分数...
 [layer3.self_attn.k_proj] 分配量化比特数...
-[layer3.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer3.self_attn.k_proj] 时间: 2.24s | 误差: 14004.5918
+[layer3.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer3.self_attn.k_proj] 时间: 3.89s | 误差: 14012.7822
 Processing layer 3, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer3.self_attn.v_proj] 计算多维度重要性分数...
 [layer3.self_attn.v_proj] 分配量化比特数...
-[layer3.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer3.self_attn.v_proj] 时间: 1.75s | 误差: 2278.7512
+[layer3.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer3.self_attn.v_proj] 时间: 3.48s | 误差: 2278.8799
 Processing layer 3, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer3.self_attn.q_proj] 计算多维度重要性分数...
 [layer3.self_attn.q_proj] 分配量化比特数...
-[layer3.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer3.self_attn.q_proj] 时间: 1.76s | 误差: 14028.5234
+[layer3.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer3.self_attn.q_proj] 时间: 2.70s | 误差: 14031.4805
 Processing layer 3, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer3.self_attn.out_proj] 计算多维度重要性分数...
 [layer3.self_attn.out_proj] 分配量化比特数...
-[layer3.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer3.self_attn.out_proj] 时间: 2.24s | 误差: 15.9413
+[layer3.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer3.self_attn.out_proj] 时间: 2.33s | 误差: 16.0174
 Processing layer 3, component fc1
 Pruning with SparseGPT ...
 
 [layer3.fc1] 计算多维度重要性分数...
 [layer3.fc1] 分配量化比特数...
-[layer3.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer3.fc1] 时间: 1.75s | 误差: 3017.3701
+[layer3.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer3.fc1] 时间: 2.13s | 误差: 3019.6965
 Processing layer 3, component fc2
 Pruning with SparseGPT ...
 
 [layer3.fc2] 计算多维度重要性分数...
 [layer3.fc2] 分配量化比特数...
-[layer3.fc2] 比特分布: 4bit(1843通道) 6bit(614通道) 8bit(615通道) | 平均: 5.20 bits
-[layer3.fc2] 时间: 5.49s | 误差: 0.4526
+[layer3.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer3.fc2] 时间: 10.92s | 误差: 0.4516
 Processing layer 4, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer4.self_attn.k_proj] 计算多维度重要性分数...
 [layer4.self_attn.k_proj] 分配量化比特数...
-[layer4.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer4.self_attn.k_proj] 时间: 1.15s | 误差: 26797.2051
+[layer4.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer4.self_attn.k_proj] 时间: 2.17s | 误差: 26812.3027
 Processing layer 4, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer4.self_attn.v_proj] 计算多维度重要性分数...
 [layer4.self_attn.v_proj] 分配量化比特数...
-[layer4.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer4.self_attn.v_proj] 时间: 1.13s | 误差: 3105.8979
+[layer4.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer4.self_attn.v_proj] 时间: 2.34s | 误差: 3107.6069
 Processing layer 4, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer4.self_attn.q_proj] 计算多维度重要性分数...
 [layer4.self_attn.q_proj] 分配量化比特数...
-[layer4.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer4.self_attn.q_proj] 时间: 1.24s | 误差: 28656.3613
+[layer4.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer4.self_attn.q_proj] 时间: 2.15s | 误差: 28663.3340
 Processing layer 4, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer4.self_attn.out_proj] 计算多维度重要性分数...
 [layer4.self_attn.out_proj] 分配量化比特数...
-[layer4.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer4.self_attn.out_proj] 时间: 1.24s | 误差: 24.1864
+[layer4.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer4.self_attn.out_proj] 时间: 2.17s | 误差: 24.2370
 Processing layer 4, component fc1
 Pruning with SparseGPT ...
 
 [layer4.fc1] 计算多维度重要性分数...
 [layer4.fc1] 分配量化比特数...
-[layer4.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer4.fc1] 时间: 1.24s | 误差: 7804.1895
+[layer4.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer4.fc1] 时间: 2.34s | 误差: 7806.0625
 Processing layer 4, component fc2
 Pruning with SparseGPT ...
 
 [layer4.fc2] 计算多维度重要性分数...
 [layer4.fc2] 分配量化比特数...
-[layer4.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer4.fc2] 时间: 6.62s | 误差: 28.4980
+[layer4.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer4.fc2] 时间: 9.10s | 误差: 28.5118
 Processing layer 5, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer5.self_attn.k_proj] 计算多维度重要性分数...
 [layer5.self_attn.k_proj] 分配量化比特数...
-[layer5.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer5.self_attn.k_proj] 时间: 1.10s | 误差: 29113.2461
+[layer5.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer5.self_attn.k_proj] 时间: 2.28s | 误差: 29111.7090
 Processing layer 5, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer5.self_attn.v_proj] 计算多维度重要性分数...
 [layer5.self_attn.v_proj] 分配量化比特数...
-[layer5.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer5.self_attn.v_proj] 时间: 1.17s | 误差: 2829.5273
+[layer5.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer5.self_attn.v_proj] 时间: 2.06s | 误差: 2831.0376
 Processing layer 5, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer5.self_attn.q_proj] 计算多维度重要性分数...
 [layer5.self_attn.q_proj] 分配量化比特数...
-[layer5.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer5.self_attn.q_proj] 时间: 1.24s | 误差: 34229.6836
+[layer5.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer5.self_attn.q_proj] 时间: 2.31s | 误差: 34242.1016
 Processing layer 5, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer5.self_attn.out_proj] 计算多维度重要性分数...
 [layer5.self_attn.out_proj] 分配量化比特数...
-[layer5.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer5.self_attn.out_proj] 时间: 1.24s | 误差: 38.6216
+[layer5.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer5.self_attn.out_proj] 时间: 2.38s | 误差: 38.6558
 Processing layer 5, component fc1
 Pruning with SparseGPT ...
 
 [layer5.fc1] 计算多维度重要性分数...
 [layer5.fc1] 分配量化比特数...
-[layer5.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer5.fc1] 时间: 1.24s | 误差: 7985.2441
+[layer5.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer5.fc1] 时间: 2.11s | 误差: 7987.1572
 Processing layer 5, component fc2
 Pruning with SparseGPT ...
 
 [layer5.fc2] 计算多维度重要性分数...
 [layer5.fc2] 分配量化比特数...
-[layer5.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer5.fc2] 时间: 4.54s | 误差: 68.4317
+[layer5.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer5.fc2] 时间: 9.92s | 误差: 68.4077
 Processing layer 6, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer6.self_attn.k_proj] 计算多维度重要性分数...
 [layer6.self_attn.k_proj] 分配量化比特数...
-[layer6.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer6.self_attn.k_proj] 时间: 1.12s | 误差: 31473.3926
+[layer6.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer6.self_attn.k_proj] 时间: 2.16s | 误差: 31462.5840
 Processing layer 6, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer6.self_attn.v_proj] 计算多维度重要性分数...
 [layer6.self_attn.v_proj] 分配量化比特数...
-[layer6.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer6.self_attn.v_proj] 时间: 1.16s | 误差: 3851.2947
+[layer6.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer6.self_attn.v_proj] 时间: 5.49s | 误差: 3854.2559
 Processing layer 6, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer6.self_attn.q_proj] 计算多维度重要性分数...
 [layer6.self_attn.q_proj] 分配量化比特数...
-[layer6.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer6.self_attn.q_proj] 时间: 1.24s | 误差: 33285.3125
+[layer6.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer6.self_attn.q_proj] 时间: 3.17s | 误差: 33278.5234
 Processing layer 6, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer6.self_attn.out_proj] 计算多维度重要性分数...
 [layer6.self_attn.out_proj] 分配量化比特数...
-[layer6.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer6.self_attn.out_proj] 时间: 1.24s | 误差: 49.2800
+[layer6.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer6.self_attn.out_proj] 时间: 2.17s | 误差: 49.2530
 Processing layer 6, component fc1
 Pruning with SparseGPT ...
 
 [layer6.fc1] 计算多维度重要性分数...
 [layer6.fc1] 分配量化比特数...
-[layer6.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer6.fc1] 时间: 1.24s | 误差: 7929.6953
+[layer6.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer6.fc1] 时间: 2.28s | 误差: 7926.5576
 Processing layer 6, component fc2
 Pruning with SparseGPT ...
 
 [layer6.fc2] 计算多维度重要性分数...
 [layer6.fc2] 分配量化比特数...
-[layer6.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer6.fc2] 时间: 4.55s | 误差: 98.4973
+[layer6.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer6.fc2] 时间: 9.04s | 误差: 98.5877
 Processing layer 7, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer7.self_attn.k_proj] 计算多维度重要性分数...
 [layer7.self_attn.k_proj] 分配量化比特数...
-[layer7.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer7.self_attn.k_proj] 时间: 1.16s | 误差: 38630.2109
+[layer7.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer7.self_attn.k_proj] 时间: 2.35s | 误差: 38650.4531
 Processing layer 7, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer7.self_attn.v_proj] 计算多维度重要性分数...
 [layer7.self_attn.v_proj] 分配量化比特数...
-[layer7.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer7.self_attn.v_proj] 时间: 1.13s | 误差: 4477.0728
+[layer7.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer7.self_attn.v_proj] 时间: 2.69s | 误差: 4478.6221
 Processing layer 7, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer7.self_attn.q_proj] 计算多维度重要性分数...
 [layer7.self_attn.q_proj] 分配量化比特数...
-[layer7.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer7.self_attn.q_proj] 时间: 1.24s | 误差: 38444.4961
+[layer7.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer7.self_attn.q_proj] 时间: 3.40s | 误差: 38451.0195
 Processing layer 7, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer7.self_attn.out_proj] 计算多维度重要性分数...
 [layer7.self_attn.out_proj] 分配量化比特数...
-[layer7.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer7.self_attn.out_proj] 时间: 1.24s | 误差: 83.8105
+[layer7.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer7.self_attn.out_proj] 时间: 4.01s | 误差: 83.6418
 Processing layer 7, component fc1
 Pruning with SparseGPT ...
 
 [layer7.fc1] 计算多维度重要性分数...
 [layer7.fc1] 分配量化比特数...
-[layer7.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer7.fc1] 时间: 1.24s | 误差: 10189.0078
+[layer7.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer7.fc1] 时间: 3.61s | 误差: 10194.2471
 Processing layer 7, component fc2
 Pruning with SparseGPT ...
 
 [layer7.fc2] 计算多维度重要性分数...
 [layer7.fc2] 分配量化比特数...
-[layer7.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer7.fc2] 时间: 5.28s | 误差: 134.1205
+[layer7.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer7.fc2] 时间: 15.56s | 误差: 134.0808
 Processing layer 8, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer8.self_attn.k_proj] 计算多维度重要性分数...
 [layer8.self_attn.k_proj] 分配量化比特数...
-[layer8.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer8.self_attn.k_proj] 时间: 1.13s | 误差: 39453.0703
+[layer8.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer8.self_attn.k_proj] 时间: 4.04s | 误差: 39452.6406
 Processing layer 8, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer8.self_attn.v_proj] 计算多维度重要性分数...
 [layer8.self_attn.v_proj] 分配量化比特数...
-[layer8.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer8.self_attn.v_proj] 时间: 1.16s | 误差: 6350.5913
+[layer8.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer8.self_attn.v_proj] 时间: 4.05s | 误差: 6353.2754
 Processing layer 8, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer8.self_attn.q_proj] 计算多维度重要性分数...
 [layer8.self_attn.q_proj] 分配量化比特数...
-[layer8.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer8.self_attn.q_proj] 时间: 1.24s | 误差: 44008.7969
+[layer8.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer8.self_attn.q_proj] 时间: 3.56s | 误差: 44013.7188
 Processing layer 8, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer8.self_attn.out_proj] 计算多维度重要性分数...
 [layer8.self_attn.out_proj] 分配量化比特数...
-[layer8.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer8.self_attn.out_proj] 时间: 1.24s | 误差: 157.9515
+[layer8.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer8.self_attn.out_proj] 时间: 4.03s | 误差: 157.3816
 Processing layer 8, component fc1
 Pruning with SparseGPT ...
 
 [layer8.fc1] 计算多维度重要性分数...
 [layer8.fc1] 分配量化比特数...
-[layer8.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer8.fc1] 时间: 1.05s | 误差: 14115.1133
+[layer8.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer8.fc1] 时间: 4.05s | 误差: 14120.0117
 Processing layer 8, component fc2
 Pruning with SparseGPT ...
 
 [layer8.fc2] 计算多维度重要性分数...
 [layer8.fc2] 分配量化比特数...
-[layer8.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer8.fc2] 时间: 8.38s | 误差: 220.6349
+[layer8.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer8.fc2] 时间: 14.95s | 误差: 220.6047
 Processing layer 9, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer9.self_attn.k_proj] 计算多维度重要性分数...
 [layer9.self_attn.k_proj] 分配量化比特数...
-[layer9.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer9.self_attn.k_proj] 时间: 1.24s | 误差: 46377.4297
+[layer9.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer9.self_attn.k_proj] 时间: 4.03s | 误差: 46350.3086
 Processing layer 9, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer9.self_attn.v_proj] 计算多维度重要性分数...
 [layer9.self_attn.v_proj] 分配量化比特数...
-[layer9.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer9.self_attn.v_proj] 时间: 1.24s | 误差: 7484.5225
+[layer9.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer9.self_attn.v_proj] 时间: 3.51s | 误差: 7487.8730
 Processing layer 9, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer9.self_attn.q_proj] 计算多维度重要性分数...
 [layer9.self_attn.q_proj] 分配量化比特数...
-[layer9.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer9.self_attn.q_proj] 时间: 1.24s | 误差: 50306.7852
+[layer9.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer9.self_attn.q_proj] 时间: 2.20s | 误差: 50324.3711
 Processing layer 9, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer9.self_attn.out_proj] 计算多维度重要性分数...
 [layer9.self_attn.out_proj] 分配量化比特数...
-[layer9.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer9.self_attn.out_proj] 时间: 1.01s | 误差: 274.6578
+[layer9.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer9.self_attn.out_proj] 时间: 0.39s | 误差: 273.0558
 Processing layer 9, component fc1
 Pruning with SparseGPT ...
 
 [layer9.fc1] 计算多维度重要性分数...
 [layer9.fc1] 分配量化比特数...
-[layer9.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer9.fc1] 时间: 1.23s | 误差: 19357.1777
+[layer9.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer9.fc1] 时间: 0.39s | 误差: 19360.0469
 Processing layer 9, component fc2
 Pruning with SparseGPT ...
 
 [layer9.fc2] 计算多维度重要性分数...
 [layer9.fc2] 分配量化比特数...
-[layer9.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer9.fc2] 时间: 4.75s | 误差: 359.8978
+[layer9.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer9.fc2] 时间: 1.56s | 误差: 360.5228
 Processing layer 10, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer10.self_attn.k_proj] 计算多维度重要性分数...
 [layer10.self_attn.k_proj] 分配量化比特数...
-[layer10.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer10.self_attn.k_proj] 时间: 1.24s | 误差: 43843.6719
+[layer10.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer10.self_attn.k_proj] 时间: 0.39s | 误差: 43853.8359
 Processing layer 10, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer10.self_attn.v_proj] 计算多维度重要性分数...
 [layer10.self_attn.v_proj] 分配量化比特数...
-[layer10.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer10.self_attn.v_proj] 时间: 1.24s | 误差: 9335.6885
+[layer10.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer10.self_attn.v_proj] 时间: 0.39s | 误差: 9329.6875
 Processing layer 10, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer10.self_attn.q_proj] 计算多维度重要性分数...
 [layer10.self_attn.q_proj] 分配量化比特数...
-[layer10.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer10.self_attn.q_proj] 时间: 1.24s | 误差: 43062.5352
+[layer10.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer10.self_attn.q_proj] 时间: 0.39s | 误差: 43040.7344
 Processing layer 10, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer10.self_attn.out_proj] 计算多维度重要性分数...
 [layer10.self_attn.out_proj] 分配量化比特数...
-[layer10.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer10.self_attn.out_proj] 时间: 1.01s | 误差: 259.2320
+[layer10.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer10.self_attn.out_proj] 时间: 0.39s | 误差: 257.7951
 Processing layer 10, component fc1
 Pruning with SparseGPT ...
 
 [layer10.fc1] 计算多维度重要性分数...
 [layer10.fc1] 分配量化比特数...
-[layer10.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer10.fc1] 时间: 1.24s | 误差: 24424.1602
+[layer10.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer10.fc1] 时间: 0.39s | 误差: 24402.1895
 Processing layer 10, component fc2
 Pruning with SparseGPT ...
 
 [layer10.fc2] 计算多维度重要性分数...
 [layer10.fc2] 分配量化比特数...
-[layer10.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer10.fc2] 时间: 6.49s | 误差: 551.3635
+[layer10.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer10.fc2] 时间: 1.56s | 误差: 551.1313
 Processing layer 11, component self_attn.k_proj
 Pruning with SparseGPT ...
 
 [layer11.self_attn.k_proj] 计算多维度重要性分数...
 [layer11.self_attn.k_proj] 分配量化比特数...
-[layer11.self_attn.k_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
-Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
-6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer11.self_attn.k_proj] 时间: 2.23s | 误差: 43214.5000
+[layer11.self_attn.k_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer11.self_attn.k_proj] 时间: 0.39s | 误差: 43191.3359
 Processing layer 11, component self_attn.v_proj
 Pruning with SparseGPT ...
 
 [layer11.self_attn.v_proj] 计算多维度重要性分数...
 [layer11.self_attn.v_proj] 分配量化比特数...
-[layer11.self_attn.v_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer11.self_attn.v_proj] 时间: 1.75s | 误差: 11626.2539
+[layer11.self_attn.v_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer11.self_attn.v_proj] 时间: 2.57s | 误差: 11612.2969
 Processing layer 11, component self_attn.q_proj
 Pruning with SparseGPT ...
 
 [layer11.self_attn.q_proj] 计算多维度重要性分数...
 [layer11.self_attn.q_proj] 分配量化比特数...
-[layer11.self_attn.q_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer11.self_attn.q_proj] 时间: 1.76s | 误差: 46014.4766
+[layer11.self_attn.q_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer11.self_attn.q_proj] 时间: 0.39s | 误差: 45986.2812
 Processing layer 11, component self_attn.out_proj
 Pruning with SparseGPT ...
 
 [layer11.self_attn.out_proj] 计算多维度重要性分数...
 [layer11.self_attn.out_proj] 分配量化比特数...
-[layer11.self_attn.out_proj] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer11.self_attn.out_proj] 时间: 2.25s | 误差: 462.2870
+[layer11.self_attn.out_proj] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer11.self_attn.out_proj] 时间: 0.39s | 误差: 462.1172
 Processing layer 11, component fc1
 Pruning with SparseGPT ...
 
 [layer11.fc1] 计算多维度重要性分数...
 [layer11.fc1] 分配量化比特数...
-[layer11.fc1] 比特分布: 2bit(154通道) 3bit(153通道) 4bit(154通道) 6bit(153通道) 8bit(154通道) | 平均: 4.60 bits
-[layer11.fc1] 时间: 1.75s | 误差: 26914.1660
+[layer11.fc1] 比特分布: 2bit(512通道) 8bit(256通道) | 平均: 4.00 bits
+[layer11.fc1] 时间: 0.39s | 误差: 26881.0430
 Processing layer 11, component fc2
 Pruning with SparseGPT ...
 
 [layer11.fc2] 计算多维度重要性分数...
 [layer11.fc2] 分配量化比特数...
-[layer11.fc2] 比特分布: 2bit(615通道) 3bit(614通道) 4bit(614通道) 6bit(614通道) 8bit(615通道) | 平均: 4.60 bits
-[layer11.fc2] 时间: 7.24s | 误差: 578.4911
+[layer11.fc2] 比特分布: 2bit(2048通道) 8bit(1024通道) | 平均: 4.00 bits
+[layer11.fc2] 时间: 1.56s | 误差: 577.0457
 
 ================================================================================
 
@@ -519,13 +517,10 @@ Pruning with SparseGPT ...
 总通道数: 82944
 
 比特分布:
-  2-bit:  16005 通道 (19.30%)
-  3-bit:  15934 通道 (19.21%)
-  4-bit:  17837 通道 (21.50%)
-  6-bit:  16548 通道 (19.95%)
-  8-bit:  16620 通道 (20.04%)
+  2-bit:  55296 通道 (66.67%)
+  8-bit:  27648 通道 (33.33%)
 
-平均比特数: 4.609 bits
+平均比特数: 4.000 bits
 ============================================================
 
 ================================================================================
@@ -540,7 +535,7 @@ Layer model.decoder.layers.0.self_attn.out_proj.weight: 50.00% sparse
 Layer model.decoder.layers.0.self_attn_layer_norm.weight: 0.00% sparse
 Layer model.decoder.layers.0.fc1.weight: 50.00% sparse
 Layer model.decoder.layers.0.fc2.weight: 50.00% sparse
-Total pruning time: 176.14s
+Total pruning time: 278.60s
 Evaluating on wikitext2
 Evaluating on wikitext2 ...
 Evaluating layer 0
@@ -553,9 +548,11 @@ Evaluating layer 6
 Evaluating layer 7
 Evaluating layer 8
 Evaluating layer 9
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
 Evaluating layer 10
 Evaluating layer 11
-Perplexity on wikitext2: 36.186
+Perplexity on wikitext2: 36.175
 Evaluating on ptb
 Evaluating on ptb ...
 Evaluating layer 0
@@ -570,7 +567,7 @@ Evaluating layer 8
 Evaluating layer 9
 Evaluating layer 10
 Evaluating layer 11
-Perplexity on ptb: 56.294
+Perplexity on ptb: 55.930
 Evaluating on c4
 Evaluating on c4 ...
 Evaluating layer 0
@@ -585,22 +582,22 @@ Evaluating layer 8
 Evaluating layer 9
 Evaluating layer 10
 Evaluating layer 11
-Perplexity on c4: 35.601
-	Command being timed: "/media/user/data3/toky/CondaEnvs/SparseGPT/bin/python enhanced_version/opt_enhanced.py facebook/opt-125m c4 --sparsity 0.5 --wbits 4 --target_avg_bits 4.0 --bit_method quantile"
-	User time (seconds): 240.67
-	System time (seconds): 21.39
-	Percent of CPU this job got: 98%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:24.81
+Perplexity on c4: 35.615
+	Command being timed: "/media/user/data3/toky/CondaEnvs/SparseGPT/bin/python enhanced_version/opt_enhanced.py facebook/opt-125m c4 --sparsity 0.5 --wbits 4 --target_avg_bits 4.0 --bit_method budget"
+	User time (seconds): 339.13
+	System time (seconds): 20.38
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:58.70
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1311116
+	Maximum resident set size (kbytes): 1429432
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 1149292
-	Voluntary context switches: 5249
-	Involuntary context switches: 1303
+	Minor (reclaiming a frame) page faults: 1281166
+	Voluntary context switches: 6106
+	Involuntary context switches: 1524
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 16
@@ -610,11 +607,11 @@ Perplexity on c4: 35.601
 	Page size (bytes): 4096
 	Exit status: 0
 
-总运行时间: 265 秒
+总运行时间: 359 秒
 
 性能指标:
-  总时间: 265 秒
-  峰值内存: 1280.38 MB
-  平均每层时间: 3.63014 秒
-  吞吐量: .483 samples/sec
+  总时间: 359 秒
+  峰值内存: 1395.92 MB
+  平均每层时间: 4.91781 秒
+  吞吐量: .356 samples/sec
 

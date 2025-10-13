@@ -61,11 +61,43 @@
 
 ## 3. 计算复杂度对比
 
+| Method | Runtime (sec) | Peak Memory (MB) | Throughput (samples/sec) |
+|--------|---------------|------------------|---------------------------|
+| original             | 161.00 | 1213.41 | 0.795 |
+| enhanced_quantile    | 265.00 | 1280.38 | 0.483 |
+| enhanced_budget      | 359.00 | 1395.92 | 0.356 |
+
+![Complexity Comparison](complexity_comparison.png)
+
 ## 4. 统计显著性分析
+
+### 4.1 多次运行结果
+
+#### WIKITEXT2
+
+| Method | Mean | Std | 95% CI |
+|--------|------|-----|--------|
+| enhanced_quantile    | 36.186 | 0.000 | [nan, nan] |
+
+#### PTB
+
+| Method | Mean | Std | 95% CI |
+|--------|------|-----|--------|
+| enhanced_quantile    | 56.294 | 0.000 | [nan, nan] |
+
+#### C4
+
+| Method | Mean | Std | 95% CI |
+|--------|------|-----|--------|
+| enhanced_quantile    | 35.601 | 0.000 | [nan, nan] |
+
+![Statistical Distribution](statistical_distribution.png)
 
 ## 5. 结论
 
+- **计算开销**: 运行时间 1.65x, 内存占用 1.06x
+  - ⚠ 计算开销较大 (>1.5x)
 
 ---
 
-*报告生成时间: 2025-10-13 10:05:20*
+*报告生成时间: 2025-10-13 17:16:52*

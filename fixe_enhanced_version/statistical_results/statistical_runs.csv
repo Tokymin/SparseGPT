@@ -1,2 +1,11 @@
 method,run_id,wikitext2_ppl,ptb_ppl,c4_ppl,time_sec
 original,1,,,,162.707230323
+original,2,,,,156.251505932
+original,3,,,,147.001709487
+original,4,,,,156.966869378
+original,5,,,,149.423702970
+enhanced_quantile,1,36.186,56.294,35.601,130.107034606
+enhanced_quantile,2,36.186,56.294,35.601,225.473067223
+enhanced_quantile,3,36.186,56.294,35.601,224.618070461
+enhanced_quantile,4,36.186,56.294,35.601,222.536038391
+enhanced_quantile,5,36.186,56.294,35.601,225.796309780

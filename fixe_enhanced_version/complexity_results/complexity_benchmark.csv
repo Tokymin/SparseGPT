@@ -1,2 +1,4 @@
 method,wall_time_sec,gpu_memory_mb,layer_avg_time_sec,total_samples,throughput_samples_per_sec
 original,161,1213.41,161,128,.795
+enhanced_quantile,265,1280.38,3.63014,128,.483
+enhanced_budget,359,1395.92,4.91781,128,.356

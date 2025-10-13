@@ -1,0 +1,53 @@
+运行增强版 SparseGPT (Budget方法, 目标8.0bit)...
+/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Using device: cuda
+Evaluating on wikitext2
+Evaluating on wikitext2 ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Perplexity on wikitext2: 25.953
+Evaluating on ptb
+Evaluating on ptb ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Perplexity on ptb: 38.985
+Evaluating on c4
+Evaluating on c4 ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Perplexity on c4: 28.037
+完成时间: 2025年 10月 13日 星期一 01:52:02 CST
+

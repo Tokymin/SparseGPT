@@ -1,0 +1,2 @@
+method,wall_time_sec,gpu_memory_mb,layer_avg_time_sec,total_samples,throughput_samples_per_sec
+original,161,1213.41,161,128,.795

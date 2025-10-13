@@ -1,0 +1,360 @@
+运行原版 SparseGPT (固定4.0bit量化)...
+/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Starting ...
+Ready.
+0 self_attn.k_proj
+Pruning ...
+time 1.80
+error 12694.560546875
+0 self_attn.v_proj
+Pruning ...
+time 1.71
+error 259.6511535644531
+0 self_attn.q_proj
+Pruning ...
+time 1.70
+error 10528.078125
+0 self_attn.out_proj
+Pruning ...
+time 1.71
+error 5.852448463439941
+0 fc1
+Pruning ...
+time 1.75
+error 909.3890380859375
+0 fc2
+Pruning ...
+time 9.08
+error 38.57969284057617
+1 self_attn.k_proj
+Pruning ...
+time 1.71
+error 7648.77587890625
+1 self_attn.v_proj
+Pruning ...
+time 1.74
+error 273.9552001953125
+1 self_attn.q_proj
+Pruning ...
+time 1.76
+error 5446.19482421875
+1 self_attn.out_proj
+Pruning ...
+time 1.70
+error 5.494933128356934
+1 fc1
+Pruning ...
+time 1.71
+error 3451.06689453125
+1 fc2
+Pruning ...
+time 6.84
+error 32.198158264160156
+2 self_attn.k_proj
+Pruning ...
+time 1.70
+error 17488.806640625
+2 self_attn.v_proj
+Pruning ...
+time 1.75
+error 842.6561889648438
+2 self_attn.q_proj
+Pruning ...
+time 1.75
+error 14303.724609375
+2 self_attn.out_proj
+Pruning ...
+time 1.70
+error 6.676671028137207
+2 fc1
+Pruning ...
+time 1.70
+error 3128.31982421875
+2 fc2
+Pruning ...
+time 6.83
+error 30.344987869262695
+3 self_attn.k_proj
+Pruning ...
+time 2.46
+error 11441.986328125
+3 self_attn.v_proj
+Pruning ...
+time 1.71
+error 1167.439697265625
+3 self_attn.q_proj
+Pruning ...
+time 1.77
+error 11013.4384765625
+3 self_attn.out_proj
+Pruning ...
+time 1.71
+error 7.721445083618164
+3 fc1
+Pruning ...
+time 1.70
+error 2091.38037109375
+3 fc2
+Pruning ...
+time 8.60
+error 22.24526596069336
+4 self_attn.k_proj
+Pruning ...
+time 3.38
+error 16807.09375
+4 self_attn.v_proj
+Pruning ...
+time 1.97
+error 1466.0506591796875
+4 self_attn.q_proj
+Pruning ...
+time 1.71
+error 16443.984375
+4 self_attn.out_proj
+Pruning ...
+time 1.70
+error 10.056467056274414
+4 fc1
+Pruning ...
+time 1.71
+error 3548.56005859375
+4 fc2
+Pruning ...
+time 6.85
+error 60.78679656982422
+5 self_attn.k_proj
+Pruning ...
+time 1.76
+error 18023.658203125
+5 self_attn.v_proj
+Pruning ...
+time 1.57
+error 1274.5888671875
+5 self_attn.q_proj
+Pruning ...
+time 1.58
+error 18476.3125
+5 self_attn.out_proj
+Pruning ...
+time 1.76
+error 18.03923797607422
+5 fc1
+Pruning ...
+time 1.70
+error 3367.911865234375
+5 fc2
+Pruning ...
+time 6.83
+error 117.02235412597656
+6 self_attn.k_proj
+Pruning ...
+time 1.71
+error 19817.09375
+6 self_attn.v_proj
+Pruning ...
+time 1.71
+error 1739.420166015625
+6 self_attn.q_proj
+Pruning ...
+time 1.75
+error 18388.314453125
+6 self_attn.out_proj
+Pruning ...
+time 1.75
+error 23.09535026550293
+6 fc1
+Pruning ...
+time 1.70
+error 3437.18115234375
+6 fc2
+Pruning ...
+time 6.84
+error 147.59780883789062
+7 self_attn.k_proj
+Pruning ...
+time 1.71
+error 22312.69921875
+7 self_attn.v_proj
+Pruning ...
+time 1.71
+error 1947.968017578125
+7 self_attn.q_proj
+Pruning ...
+time 1.75
+error 20827.4296875
+7 self_attn.out_proj
+Pruning ...
+time 1.74
+error 34.80725860595703
+7 fc1
+Pruning ...
+time 1.71
+error 4300.53564453125
+7 fc2
+Pruning ...
+time 6.83
+error 182.248779296875
+8 self_attn.k_proj
+Pruning ...
+time 1.71
+error 22964.52734375
+8 self_attn.v_proj
+Pruning ...
+time 1.71
+error 2784.7265625
+8 self_attn.q_proj
+Pruning ...
+time 1.74
+error 22619.4921875
+8 self_attn.out_proj
+Pruning ...
+time 1.76
+error 56.14531707763672
+8 fc1
+Pruning ...
+time 1.70
+error 5657.47998046875
+8 fc2
+Pruning ...
+time 6.83
+error 303.0386047363281
+9 self_attn.k_proj
+Pruning ...
+time 1.70
+error 25140.3515625
+9 self_attn.v_proj
+Pruning ...
+time 1.70
+error 3102.2822265625
+9 self_attn.q_proj
+Pruning ...
+time 1.77
+error 23384.0546875
+9 self_attn.out_proj
+Pruning ...
+time 1.71
+error 99.1429214477539
+9 fc1
+Pruning ...
+time 1.69
+error 7386.64453125
+9 fc2
+Pruning ...
+time 6.84
+error 391.1111755371094
+10 self_attn.k_proj
+Pruning ...
+time 1.70
+error 26947.18359375
+10 self_attn.v_proj
+Pruning ...
+time 1.72
+error 3790.39697265625
+10 self_attn.q_proj
+Pruning ...
+time 1.75
+error 21968.865234375
+10 self_attn.out_proj
+Pruning ...
+time 1.70
+error 120.77394104003906
+10 fc1
+Pruning ...
+time 1.70
+error 9126.99609375
+10 fc2
+Pruning ...
+time 6.84
+error 644.2171630859375
+11 self_attn.k_proj
+Pruning ...
+time 1.70
+error 23535.404296875
+11 self_attn.v_proj
+Pruning ...
+time 1.76
+error 4891.51318359375
+11 self_attn.q_proj
+Pruning ...
+time 1.72
+error 20872.98046875
+11 self_attn.out_proj
+Pruning ...
+time 1.71
+error 243.9868927001953
+11 fc1
+Pruning ...
+time 1.70
+error 12303.4375
+11 fc2
+Pruning ...
+time 6.85
+error 884.4107666015625
+model.decoder.embed_tokens.weight tensor(3.8851e-07)
+model.decoder.embed_positions.weight tensor(0.0005)
+model.decoder.final_layer_norm.weight tensor(0.)
+model.decoder.final_layer_norm.bias tensor(0.)
+model.decoder.layers.0.self_attn.k_proj.weight tensor(0.3467)
+model.decoder.layers.0.self_attn.k_proj.bias tensor(0.)
+model.decoder.layers.0.self_attn.v_proj.weight tensor(0.3099)
+model.decoder.layers.0.self_attn.v_proj.bias tensor(0.)
+model.decoder.layers.0.self_attn.q_proj.weight tensor(0.3229)
+model.decoder.layers.0.self_attn.q_proj.bias tensor(0.)
+model.decoder.layers.0.self_attn.out_proj.weight tensor(0.3220)
+model.decoder.layers.0.self_attn.out_proj.bias tensor(0.)
+model.decoder.layers.0.self_attn_layer_norm.weight tensor(0.)
+model.decoder.layers.0.self_attn_layer_norm.bias tensor(0.)
+model.decoder.layers.0.fc1.weight tensor(0.3042)
+model.decoder.layers.0.fc1.bias tensor(0.)
+model.decoder.layers.0.fc2.weight tensor(0.3396)
+207.5932433605194
+wikitext2
+Evaluating ...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+Perplexity: 30.041853
+ptb
+Evaluating ...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+Perplexity: 47.481045
+c4
+Evaluating ...
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+Perplexity: 31.410421
+完成时间: 2025年 10月 12日 星期日 22:47:49 CST
+

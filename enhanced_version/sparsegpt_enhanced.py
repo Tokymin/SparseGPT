@@ -407,6 +407,9 @@ class SparseGPT:
                     target_bits = int(bit_allocation[global_idx].item())
                     self.quantizer.maxq = torch.tensor(2 ** target_bits - 1, device=self.dev)
                     
+                    # ✅ 修复: 为当前通道重新计算scale和zero
+                    self.quantizer.find_params(q.unsqueeze(1), weight=True)
+                    
                     # 量化
                     q = quantize(
                         q.unsqueeze(1), 

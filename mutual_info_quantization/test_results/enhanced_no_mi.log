@@ -1,0 +1,283 @@
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Starting MI-based sequential pruning & quantization ...
+  使用MI分组: 0
+Ready to process layers.
+
+Processing layer_0.fc2 (1/12) ...
+[layer_0.self_attn.k_proj] 时间: 0.21s | 误差: 20929.4141
+
+Processing layer_0.fc2 (1/12) ...
+[layer_0.self_attn.v_proj] 时间: 0.15s | 误差: 652.8307
+
+Processing layer_0.fc2 (1/12) ...
+[layer_0.self_attn.q_proj] 时间: 0.15s | 误差: 20076.3828
+
+Processing layer_0.fc2 (1/12) ...
+[layer_0.self_attn.out_proj] 时间: 0.15s | 误差: 10.5243
+
+Processing layer_0.fc2 (1/12) ...
+[layer_0.fc1] 时间: 0.15s | 误差: 2588.8340
+
+Processing layer_0.fc2 (1/12) ...
+[layer_0.fc2] 时间: 0.62s | 误差: 59.8669
+
+Processing layer_1.fc2 (2/12) ...
+[layer_1.self_attn.k_proj] 时间: 0.15s | 误差: 14204.2031
+
+Processing layer_1.fc2 (2/12) ...
+[layer_1.self_attn.v_proj] 时间: 0.15s | 误差: 758.9028
+
+Processing layer_1.fc2 (2/12) ...
+[layer_1.self_attn.q_proj] 时间: 0.15s | 误差: 7552.2109
+
+Processing layer_1.fc2 (2/12) ...
+[layer_1.self_attn.out_proj] 时间: 0.15s | 误差: 8.4168
+
+Processing layer_1.fc2 (2/12) ...
+[layer_1.fc1] 时间: 0.16s | 误差: 8520.7578
+
+Processing layer_1.fc2 (2/12) ...
+[layer_1.fc2] 时间: 0.62s | 误差: 39.0504
+
+Processing layer_2.fc2 (3/12) ...
+[layer_2.self_attn.k_proj] 时间: 0.15s | 误差: 29435.1699
+
+Processing layer_2.fc2 (3/12) ...
+[layer_2.self_attn.v_proj] 时间: 0.15s | 误差: 2159.1389
+
+Processing layer_2.fc2 (3/12) ...
+[layer_2.self_attn.q_proj] 时间: 0.15s | 误差: 24904.7402
+
+Processing layer_2.fc2 (3/12) ...
+[layer_2.self_attn.out_proj] 时间: 0.16s | 误差: 13.3963
+
+Processing layer_2.fc2 (3/12) ...
+[layer_2.fc1] 时间: 0.15s | 误差: 7604.3682
+
+Processing layer_2.fc2 (3/12) ...
+[layer_2.fc2] 时间: 0.61s | 误差: 35.3108
+
+Processing layer_3.fc2 (4/12) ...
+[layer_3.self_attn.k_proj] 时间: 0.15s | 误差: 23900.4316
+
+Processing layer_3.fc2 (4/12) ...
+[layer_3.self_attn.v_proj] 时间: 0.15s | 误差: 2960.3433
+
+Processing layer_3.fc2 (4/12) ...
+[layer_3.self_attn.q_proj] 时间: 0.15s | 误差: 22721.3223
+
+Processing layer_3.fc2 (4/12) ...
+[layer_3.self_attn.out_proj] 时间: 0.15s | 误差: 18.7978
+
+Processing layer_3.fc2 (4/12) ...
+[layer_3.fc1] 时间: 0.15s | 误差: 4914.5181
+
+Processing layer_3.fc2 (4/12) ...
+[layer_3.fc2] 时间: 0.62s | 误差: 22.3880
+
+Processing layer_4.fc2 (5/12) ...
+[layer_4.self_attn.k_proj] 时间: 0.15s | 误差: 38607.6289
+
+Processing layer_4.fc2 (5/12) ...
+[layer_4.self_attn.v_proj] 时间: 0.15s | 误差: 3868.3645
+
+Processing layer_4.fc2 (5/12) ...
+[layer_4.self_attn.q_proj] 时间: 0.15s | 误差: 40259.3906
+
+Processing layer_4.fc2 (5/12) ...
+[layer_4.self_attn.out_proj] 时间: 0.15s | 误差: 30.4381
+
+Processing layer_4.fc2 (5/12) ...
+[layer_4.fc1] 时间: 0.15s | 误差: 10291.8447
+
+Processing layer_4.fc2 (5/12) ...
+[layer_4.fc2] 时间: 0.61s | 误差: 77.3185
+
+Processing layer_5.fc2 (6/12) ...
+[layer_5.self_attn.k_proj] 时间: 0.15s | 误差: 41082.3672
+
+Processing layer_5.fc2 (6/12) ...
+[layer_5.self_attn.v_proj] 时间: 0.15s | 误差: 3465.3315
+
+Processing layer_5.fc2 (6/12) ...
+[layer_5.self_attn.q_proj] 时间: 0.15s | 误差: 45656.2969
+
+Processing layer_5.fc2 (6/12) ...
+[layer_5.self_attn.out_proj] 时间: 0.15s | 误差: 54.8793
+
+Processing layer_5.fc2 (6/12) ...
+[layer_5.fc1] 时间: 0.15s | 误差: 9715.6768
+
+Processing layer_5.fc2 (6/12) ...
+[layer_5.fc2] 时间: 0.61s | 误差: 153.7979
+
+Processing layer_6.fc2 (7/12) ...
+[layer_6.self_attn.k_proj] 时间: 0.15s | 误差: 44027.2305
+
+Processing layer_6.fc2 (7/12) ...
+[layer_6.self_attn.v_proj] 时间: 0.15s | 误差: 4705.4126
+
+Processing layer_6.fc2 (7/12) ...
+[layer_6.self_attn.q_proj] 时间: 0.15s | 误差: 45146.6562
+
+Processing layer_6.fc2 (7/12) ...
+[layer_6.self_attn.out_proj] 时间: 0.15s | 误差: 60.5186
+
+Processing layer_6.fc2 (7/12) ...
+[layer_6.fc1] 时间: 0.15s | 误差: 9624.9570
+
+Processing layer_6.fc2 (7/12) ...
+[layer_6.fc2] 时间: 0.61s | 误差: 201.4469
+
+Processing layer_7.fc2 (8/12) ...
+[layer_7.self_attn.k_proj] 时间: 0.15s | 误差: 50976.4375
+
+Processing layer_7.fc2 (8/12) ...
+[layer_7.self_attn.v_proj] 时间: 0.15s | 误差: 5366.3750
+
+Processing layer_7.fc2 (8/12) ...
+[layer_7.self_attn.q_proj] 时间: 0.15s | 误差: 50857.8516
+
+Processing layer_7.fc2 (8/12) ...
+[layer_7.self_attn.out_proj] 时间: 0.15s | 误差: 100.5357
+
+Processing layer_7.fc2 (8/12) ...
+[layer_7.fc1] 时间: 0.15s | 误差: 12162.1240
+
+Processing layer_7.fc2 (8/12) ...
+[layer_7.fc2] 时间: 0.61s | 误差: 253.6373
+
+Processing layer_8.fc2 (9/12) ...
+[layer_8.self_attn.k_proj] 时间: 0.15s | 误差: 51530.0469
+
+Processing layer_8.fc2 (9/12) ...
+[layer_8.self_attn.v_proj] 时间: 0.15s | 误差: 7585.6445
+
+Processing layer_8.fc2 (9/12) ...
+[layer_8.self_attn.q_proj] 时间: 0.15s | 误差: 56044.4062
+
+Processing layer_8.fc2 (9/12) ...
+[layer_8.self_attn.out_proj] 时间: 0.15s | 误差: 164.0764
+
+Processing layer_8.fc2 (9/12) ...
+[layer_8.fc1] 时间: 0.15s | 误差: 16398.9180
+
+Processing layer_8.fc2 (9/12) ...
+[layer_8.fc2] 时间: 0.61s | 误差: 413.7518
+
+Processing layer_9.fc2 (10/12) ...
+[layer_9.self_attn.k_proj] 时间: 0.15s | 误差: 58986.7773
+
+Processing layer_9.fc2 (10/12) ...
+[layer_9.self_attn.v_proj] 时间: 0.15s | 误差: 8850.9102
+
+Processing layer_9.fc2 (10/12) ...
+[layer_9.self_attn.q_proj] 时间: 0.15s | 误差: 62135.9609
+
+Processing layer_9.fc2 (10/12) ...
+[layer_9.self_attn.out_proj] 时间: 0.15s | 误差: 274.4043
+
+Processing layer_9.fc2 (10/12) ...
+[layer_9.fc1] 时间: 0.15s | 误差: 22120.2891
+
+Processing layer_9.fc2 (10/12) ...
+[layer_9.fc2] 时间: 0.61s | 误差: 581.3606
+
+Processing layer_10.fc2 (11/12) ...
+[layer_10.self_attn.k_proj] 时间: 0.15s | 误差: 57000.6289
+
+Processing layer_10.fc2 (11/12) ...
+[layer_10.self_attn.v_proj] 时间: 0.15s | 误差: 10879.1055
+
+Processing layer_10.fc2 (11/12) ...
+[layer_10.self_attn.q_proj] 时间: 0.15s | 误差: 55152.6875
+
+Processing layer_10.fc2 (11/12) ...
+[layer_10.self_attn.out_proj] 时间: 0.15s | 误差: 344.3186
+
+Processing layer_10.fc2 (11/12) ...
+[layer_10.fc1] 时间: 0.15s | 误差: 27649.0273
+
+Processing layer_10.fc2 (11/12) ...
+[layer_10.fc2] 时间: 0.61s | 误差: 938.9924
+
+Processing layer_11.fc2 (12/12) ...
+[layer_11.self_attn.k_proj] 时间: 0.15s | 误差: 53823.6953
+
+Processing layer_11.fc2 (12/12) ...
+[layer_11.self_attn.v_proj] 时间: 0.15s | 误差: 13507.1348
+
+Processing layer_11.fc2 (12/12) ...
+[layer_11.self_attn.q_proj] 时间: 0.15s | 误差: 55543.0234
+
+Processing layer_11.fc2 (12/12) ...
+[layer_11.self_attn.out_proj] 时间: 0.15s | 误差: 543.1163
+
+Processing layer_11.fc2 (12/12) ...
+[layer_11.fc1] 时间: 0.15s | 误差: 31609.4102
+
+Processing layer_11.fc2 (12/12) ...
+[layer_11.fc2] 时间: 0.62s | 误差: 1171.0070
+
+======================================================================
+互信息量化统计摘要 (MI-based Quantization Statistics)
+======================================================================
+
+总通道数: 0
+
+比特分布:
+======================================================================
+
+Total time: 24.62s
+
+Evaluating on wikitext2 ...
+Evaluating ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Perplexity: 39.11
+Perplexity on wikitext2: 39.109
+
+Evaluating on ptb ...
+Evaluating ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Perplexity: 60.31
+Perplexity on ptb: 60.309
+
+Evaluating on c4 ...
+Evaluating ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Perplexity: 37.44
+Perplexity on c4: 37.437

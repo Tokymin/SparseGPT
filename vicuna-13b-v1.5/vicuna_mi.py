@@ -1,0 +1,377 @@
+"""
+Vicuna模型的MI量化脚本
+
+基于LLaMA架构，适配简单
+"""
+
+import time
+import sys
+import os
+
+# 确保使用指定的GPU
+if 'CUDA_VISIBLE_DEVICES' not in os.environ:
+    os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
+
+# 添加路径
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+sys.path.insert(0, os.path.join(project_root, 'mutual_info_quantization'))
+
+import torch
+import torch.nn as nn
+
+from quant import Quantizer
+from sparsegpt_mi import SparseGPT_MI, MIQuantizationStats
+from modelutils import find_layers, DEV
+
+try:
+    import wandb
+    has_wandb = True
+except ImportError:
+    has_wandb = False
+
+
+def get_vicuna(model_name):
+    """加载Vicuna/LLaMA模型"""
+    def skip_init(*args, **kwargs):
+        pass
+    
+    torch.nn.init.kaiming_uniform_ = skip_init
+    torch.nn.init.uniform_ = skip_init
+    torch.nn.init.normal_ = skip_init
+    
+    from transformers import AutoModelForCausalLM
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32
+    )
+    
+    # 自动检测序列长度
+    if hasattr(model.config, 'max_position_embeddings'):
+        model.seqlen = model.config.max_position_embeddings
+    else:
+        model.seqlen = 2048  # 默认值
+    
+    return model
+
+
+@torch.no_grad()
+def vicuna_sequential_mi(model, dataloader, dev, args):
+    """使用互信息分组的逐层剪枝+量化 (LLaMA/Vicuna架构)"""
+    print('Starting MI-based sequential pruning & quantization...')
+    print(f'  模型架构: {model.config.model_type}')
+    print(f'  使用MI分组: {args.use_mi_grouping}')
+    if args.use_mi_grouping:
+        print(f'  分组数: {args.n_groups}')
+    
+    # 检测模型架构
+    model_type = model.config.model_type.lower()
+    if model_type not in ['llama', 'vicuna', 'mistral', 'yi', 'qwen']:
+        raise ValueError(f"不支持的模型架构: {model_type}. 此脚本仅支持 LLaMA/Vicuna 类架构")
+    
+    # 创建统计收集器
+    stats = MIQuantizationStats()
+    
+    use_cache = model.config.use_cache
+    model.config.use_cache = False
+    
+    # LLaMA/Vicuna架构使用 model.model.layers
+    layers = model.model.layers
+    
+    # 移动嵌入层
+    model.model.embed_tokens = model.model.embed_tokens.to(dev)
+    layers[0] = layers[0].to(dev)
+    
+    # 捕获输入
+    dtype = next(iter(model.parameters())).dtype
+    inps = torch.zeros(
+        (args.nsamples, model.seqlen, model.config.hidden_size),
+        dtype=dtype, device=dev
+    )
+    cache = {'i': 0, 'attention_mask': None, 'position_ids': None}
+    
+    class Catcher(nn.Module):
+        def __init__(self, module):
+            super().__init__()
+            self.module = module
+        
+        def forward(self, inp, **kwargs):
+            inps[cache['i']] = inp
+            cache['i'] += 1
+            cache['attention_mask'] = kwargs.get('attention_mask')
+            cache['position_ids'] = kwargs.get('position_ids')
+            raise ValueError
+    
+    layers[0] = Catcher(layers[0])
+    
+    for batch in dataloader:
+        try:
+            model(batch[0].to(dev))
+        except ValueError:
+            pass
+    
+    layers[0] = layers[0].module
+    
+    # 移回CPU
+    layers[0] = layers[0].cpu()
+    model.model.embed_tokens = model.model.embed_tokens.cpu()
+    torch.cuda.empty_cache()
+    
+    outs = torch.zeros_like(inps)
+    attention_mask = cache['attention_mask']
+    position_ids = cache['position_ids']
+    
+    print('Ready to process layers.')
+    
+    # 逐层处理
+    for i in range(len(layers)):
+        layer = layers[i].to(dev)
+        
+        # 查找需要量化的子层
+        subset = find_layers(layer)
+        
+        # ⚠️ 注意：LLaMA/Vicuna的层命名
+        # - self_attn.q_proj
+        # - self_attn.k_proj
+        # - self_attn.v_proj
+        # - self_attn.o_proj  (不是out_proj!)
+        # - mlp.gate_proj
+        # - mlp.up_proj
+        # - mlp.down_proj
+        
+        # 为每个子层创建 SparseGPT_MI 实例
+        gpts = {}
+        for name in subset:
+            if (not (args.minlayer <= i < args.maxlayer and args.prune_only in name)) == (not args.invert):
+                continue
+            
+            layer_name = f"layer_{i}.{name}"
+            gpts[name] = SparseGPT_MI(subset[name], layer_name=layer_name, stats_collector=stats)
+            
+            # 配置量化器
+            if args.wbits < 16:
+                gpts[name].quantizer = Quantizer()
+                gpts[name].quantizer.configure(
+                    args.wbits, perchannel=True, sym=False, mse=False
+                )
+        
+        def add_batch(name):
+            def tmp(_, inp, out):
+                gpts[name].add_batch(inp[0].data, out.data)
+            return tmp
+        
+        # 注册hook
+        handles = []
+        for name in gpts:
+            handles.append(subset[name].register_forward_hook(add_batch(name)))
+        
+        # 前向传播收集激活
+        for j in range(args.nsamples):
+            outs[j] = layer(inps[j].unsqueeze(0), attention_mask=attention_mask, position_ids=position_ids)[0]
+        
+        # 移除hook
+        for h in handles:
+            h.remove()
+        
+        # 执行剪枝+量化
+        for name in gpts:
+            layer_name = f"layer_{i}.{name}"
+            print(f'\nProcessing {layer_name} ({i+1}/{len(layers)}) ...')
+            gpts[name].fasterprune(
+                sparsity=args.sparsity,
+                prunen=args.prunen,
+                prunem=args.prunem,
+                percdamp=args.percdamp,
+                target_avg_bits=args.target_avg_bits,
+                use_mi_grouping=bool(args.use_mi_grouping),
+                n_groups=args.n_groups
+            )
+            gpts[name].free()
+        
+        # 更新输入
+        for j in range(args.nsamples):
+            with torch.no_grad():
+                outs[j] = layer(inps[j].unsqueeze(0), attention_mask=attention_mask, position_ids=position_ids)[0]
+        
+        layers[i] = layer.cpu()
+        del layer
+        del gpts
+        torch.cuda.empty_cache()
+        
+        inps, outs = outs, inps
+    
+    model.config.use_cache = use_cache
+    
+    # 打印统计摘要
+    stats.print_summary()
+    
+    # 最终清理
+    torch.cuda.empty_cache()
+    
+    return model
+
+
+def vicuna_eval(model, testenc, dev):
+    """评估Vicuna模型"""
+    print('Evaluating ...')
+    
+    testenc = testenc.input_ids
+    nsamples = testenc.numel() // model.seqlen
+    
+    use_cache = model.config.use_cache
+    model.config.use_cache = False
+    layers = model.model.layers
+    
+    model.model.embed_tokens = model.model.embed_tokens.to(dev)
+    layers[0] = layers[0].to(dev)
+    
+    dtype = next(iter(model.parameters())).dtype
+    inps = torch.zeros(
+        (nsamples, model.seqlen, model.config.hidden_size),
+        dtype=dtype, device=dev
+    )
+    cache = {'i': 0, 'attention_mask': None, 'position_ids': None}
+    
+    class Catcher(nn.Module):
+        def __init__(self, module):
+            super().__init__()
+            self.module = module
+        
+        def forward(self, inp, **kwargs):
+            inps[cache['i']] = inp
+            cache['i'] += 1
+            cache['attention_mask'] = kwargs.get('attention_mask')
+            cache['position_ids'] = kwargs.get('position_ids')
+            raise ValueError
+    
+    layers[0] = Catcher(layers[0])
+    
+    for i in range(nsamples):
+        batch = testenc[:, (i * model.seqlen):((i + 1) * model.seqlen)].to(dev)
+        try:
+            model(batch)
+        except ValueError:
+            pass
+    
+    layers[0] = layers[0].module
+    layers[0] = layers[0].cpu()
+    model.model.embed_tokens = model.model.embed_tokens.cpu()
+    torch.cuda.empty_cache()
+    
+    outs = torch.zeros_like(inps)
+    attention_mask = cache['attention_mask']
+    position_ids = cache['position_ids']
+    
+    for i in range(len(layers)):
+        print(f'Evaluating layer {i}')
+        layer = layers[i].to(dev)
+        
+        for j in range(nsamples):
+            with torch.no_grad():
+                outs[j] = layer(inps[j].unsqueeze(0), attention_mask=attention_mask, position_ids=position_ids)[0]
+        
+        layers[i] = layer.cpu()
+        del layer
+        torch.cuda.empty_cache()
+        inps, outs = outs, inps
+    
+    # ⚠️ LLaMA/Vicuna使用 model.model.norm
+    if model.model.norm is not None:
+        model.model.norm = model.model.norm.to(dev)
+    model.lm_head = model.lm_head.to(dev)
+    
+    testenc = testenc.to(dev)
+    nlls = []
+    
+    for i in range(nsamples):
+        with torch.no_grad():
+            hidden_states = inps[i].unsqueeze(0)
+            if model.model.norm is not None:
+                hidden_states = model.model.norm(hidden_states)
+            lm_logits = model.lm_head(hidden_states)
+            shift_logits = lm_logits[:, :-1, :].contiguous()
+            shift_labels = testenc[:, (i * model.seqlen):((i + 1) * model.seqlen)][:, 1:]
+            loss_fct = nn.CrossEntropyLoss()
+            loss = loss_fct(shift_logits.view(-1, shift_logits.size(-1)), shift_labels.view(-1))
+            neg_log_likelihood = loss.float() * model.seqlen
+            nlls.append(neg_log_likelihood)
+        
+        # 清理中间变量
+        del hidden_states, lm_logits, shift_logits, shift_labels
+        torch.cuda.empty_cache()
+    
+    ppl = torch.exp(torch.stack(nlls).sum() / (nsamples * model.seqlen))
+    print(f'Perplexity: {ppl.item():.2f}')
+    
+    model.config.use_cache = use_cache
+    
+    return ppl.item()
+
+
+if __name__ == '__main__':
+    import argparse
+    from datautils import *
+    
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument('model', type=str, help='Vicuna model to load')
+    parser.add_argument('dataset', type=str, choices=['wikitext2', 'ptb', 'c4'], help='Calibration dataset')
+    parser.add_argument('--seed', type=int, default=0, help='Random seed')
+    parser.add_argument('--nsamples', type=int, default=128, help='Number of calibration samples')
+    parser.add_argument('--percdamp', type=float, default=.01, help='Percent dampening')
+    parser.add_argument('--sparsity', type=float, default=0, help='Target sparsity')
+    parser.add_argument('--prunen', type=int, default=0, help='N for N:M pruning')
+    parser.add_argument('--prunem', type=int, default=0, help='M for N:M pruning')
+    parser.add_argument('--wbits', type=int, default=16, help='Base weight bits')
+    parser.add_argument('--minlayer', type=int, default=-1, help='Minimum layer')
+    parser.add_argument('--maxlayer', type=int, default=1000, help='Maximum layer')
+    parser.add_argument('--prune_only', type=str, default='', help='Prune only layers containing this string')
+    parser.add_argument('--invert', action='store_true', help='Invert prune_only')
+    parser.add_argument('--save', type=str, default='', help='Save compressed model')
+    parser.add_argument('--log_wandb', action='store_true', help='Log to W&B')
+    
+    # MI相关参数
+    parser.add_argument('--target_avg_bits', type=float, default=4.0, help='Target average bits')
+    parser.add_argument('--use_mi_grouping', type=int, default=1, help='Use MI-based grouping (0/1)')
+    parser.add_argument('--n_groups', type=int, default=10, help='Number of groups for MI clustering')
+    
+    args = parser.parse_args()
+    
+    # 加载模型
+    print(f"Loading Vicuna model: {args.model}")
+    model = get_vicuna(args.model)
+    model.eval()
+    
+    # 加载数据
+    dataloader, testloader = get_loaders(
+        args.dataset, nsamples=args.nsamples, seed=args.seed, model=args.model, seqlen=model.seqlen
+    )
+    
+    # 执行压缩
+    if args.sparsity or args.wbits < 16:
+        tick = time.time()
+        vicuna_sequential_mi(model, dataloader, DEV, args)
+        print(f'Total time: {time.time() - tick:.2f}s')
+        
+        # 压缩后清理
+        torch.cuda.empty_cache()
+    
+    # 评估
+    datasets = ['wikitext2', 'ptb', 'c4']
+    for dataset in datasets:
+        dataloader, testloader = get_loaders(
+            dataset, seed=args.seed, model=args.model, seqlen=model.seqlen
+        )
+        print(f'\nEvaluating on {dataset} ...')
+        ppl = vicuna_eval(model, testloader, DEV)
+        print(f'Perplexity on {dataset}: {ppl:.3f}')
+        
+        # 每个数据集评估后清理
+        del dataloader, testloader
+        torch.cuda.empty_cache()
+    
+    # 保存模型
+    if args.save:
+        model.save_pretrained(args.save)
+        print(f'Model saved to {args.save}')
+

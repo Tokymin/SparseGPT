@@ -1,0 +1,96 @@
+Vicuna/LLaMA 模型 MI 量化使用说明
+================================
+
+1. 环境准备
+----------
+pip install sentencepiece  # 必需！LLaMA模型的tokenizer需要
+
+2. 快速测试（推荐）
+-----------------
+# 编辑 test_vicuna.sh，修改模型路径
+vim test_vicuna.sh
+
+# 运行测试
+./test_vicuna.sh
+
+3. 手动运行
+-----------
+# 基本用法
+python vicuna_mi.py <模型路径> <数据集> [参数]
+
+# 示例1: Vicuna-13b-v1.5
+python vicuna_mi.py lmsys/vicuna-13b-v1.5 c4 --sparsity 0.5 --wbits 4
+
+# 示例2: 本地模型
+python vicuna_mi.py /path/to/vicuna-13b-v1.5 c4 --sparsity 0.5 --wbits 4
+
+# 示例3: LLaMA-2
+python vicuna_mi.py meta-llama/Llama-2-7b-hf wikitext2 --wbits 4
+
+4. 常用参数
+-----------
+--sparsity 0.5          # 稀疏度（50%权重置零）
+--wbits 4               # 量化位宽
+--target_avg_bits 4.0   # 目标平均位宽
+--use_mi_grouping 1     # 启用MI分组
+--n_groups 10           # 分组数
+--nsamples 128          # 校准样本数
+--save ./output         # 保存压缩模型
+
+5. GPU 设置
+-----------
+脚本默认使用 GPU 2 和 3
+
+修改方法：
+export CUDA_VISIBLE_DEVICES=0,1  # 使用其他GPU
+
+6. 支持的模型
+-------------
+✓ LLaMA (所有版本)
+✓ Vicuna (所有版本)
+✓ Mistral
+✓ Yi
+✓ Qwen
+
+✗ OPT (请使用 mutual_info_quantization/opt_mi.py)
+✗ BLOOM (需要另外适配)
+
+7. 常见错误
+-----------
+错误: "LlamaTokenizer requires the SentencePiece library"
+解决: pip install sentencepiece
+
+错误: "不支持的模型架构"
+解决: 检查模型类型，确保是LLaMA/Vicuna架构
+
+错误: "CUDA out of memory"
+解决: 减少样本数 --nsamples 64 或使用更少分组 --n_groups 5
+
+8. 查看日志
+-----------
+运行时会打印：
+- 每层的处理进度
+- MI统计信息
+- 分组效果
+- 最终困惑度
+
+日志会保存到 vicuna_test.log (如果使用测试脚本)
+
+9. 关键差异（vs OPT）
+--------------------
+LLaMA/Vicuna 架构特点：
+- 层结构: model.model.layers (不是 decoder.layers)
+- 注意力输出: o_proj (不是 out_proj)
+- FFN层: gate_proj, up_proj, down_proj (不是 fc1, fc2)
+- 无位置嵌入 (OPT有embed_positions)
+
+10. 下一步
+----------
+运行成功后，你可以：
+1. 评估压缩后的模型性能
+2. 保存模型用于部署
+3. 调整参数优化效果
+4. 适配到其他自定义模型
+
+详细文档请查看 README.md
+

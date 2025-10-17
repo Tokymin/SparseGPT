@@ -239,16 +239,16 @@ class SparseGPT_MI:
         print(f"[{self.layer_name}] 为分组分配比特数...")
         group_bits_dict = self.channel_groups.allocate_bits(target_avg_bits=target_avg_bits)
         
-        # 转换为通道级比特分配
+        # 转换为通道级比特分配（优化：使用向量化操作）
         bit_allocation = torch.zeros(self.columns, device=self.dev)
         
         for group_info in self.channel_groups.group_info:
             gid = group_info['group_id']
-            channels = group_info['channels']
+            channels = torch.tensor(group_info['channels'], device=self.dev)
             bits = group_bits_dict[gid]
             
-            for ch in channels:
-                bit_allocation[ch] = bits
+            # 向量化设置，避免Python循环
+            bit_allocation[channels] = bits
             
             # 更新group_info
             group_info['bits'] = bits

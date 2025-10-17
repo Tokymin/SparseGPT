@@ -1,0 +1,26 @@
+Loading Vicuna model: /mnt/share/HuggingfaceModels/lmsys/vicuna-13b-v1.5
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:06<00:13,  6.86s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:13<00:06,  6.75s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:17<00:00,  5.62s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:17<00:00,  5.94s/it]
+Token indices sequence length is longer than the specified maximum sequence length for this model (4430 > 4096). Running this sequence through the model will result in indexing errors
+Starting MI-based sequential pruning & quantization...
+  模型架构: llama
+  使用MI分组: 1
+  分组数: 10
+Ready to process layers.
+Traceback (most recent call last):
+  File "/media/user/data3/toky/Projects/SparseGPT/vicuna-13b-v1.5/vicuna_mi.py", line 341, in <module>
+    vicuna_sequential_mi(model, dataloader, DEV, args)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/media/user/data3/toky/Projects/SparseGPT/vicuna-13b-v1.5/vicuna_mi.py", line 168, in vicuna_sequential_mi
+    outs[j] = layer(inps[j].unsqueeze(0), attention_mask=attention_mask)[0]
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 292, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 204, in forward
+    query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin, position_ids)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 134, in apply_rotary_pos_emb
+    gather_indices = position_ids[:, None, :, None]  # [bs, 1, seq_len, 1]
+TypeError: 'NoneType' object is not subscriptable

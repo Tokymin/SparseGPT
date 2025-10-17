@@ -1,0 +1,151 @@
+nohup: 忽略输入
+=== Vicuna-13B 基准性能测试 ===
+模型: /mnt/share/HuggingfaceModels/lmsys/vicuna-13b-v1.5
+精度: FP16 (未压缩)
+GPU: 2,3
+
+开始测试...
+
+Loading Vicuna model: /mnt/share/HuggingfaceModels/lmsys/vicuna-13b-v1.5
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:07<00:15,  7.76s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:14<00:07,  7.19s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:18<00:00,  5.89s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:18<00:00,  6.30s/it]
+Token indices sequence length is longer than the specified maximum sequence length for this model (2699149 > 4096). Running this sequence through the model will result in indexing errors
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Token indices sequence length is longer than the specified maximum sequence length for this model (1195302 > 4096). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (4430 > 4096). Running this sequence through the model will result in indexing errors
+
+================================================================================
+测试未压缩的Vicuna-13B基准性能
+================================================================================
+模型: /mnt/share/HuggingfaceModels/lmsys/vicuna-13b-v1.5
+参数量: ~13B
+精度: FP16
+序列长度: 4096
+================================================================================
+
+
+================================================================================
+评估数据集: wikitext2
+================================================================================
+Evaluating ...
+Evaluating layer 0/40
+Evaluating layer 1/40
+Evaluating layer 2/40
+Evaluating layer 3/40
+Evaluating layer 4/40
+Evaluating layer 5/40
+Evaluating layer 6/40
+Evaluating layer 7/40
+Evaluating layer 8/40
+Evaluating layer 9/40
+Evaluating layer 10/40
+Evaluating layer 11/40
+Evaluating layer 12/40
+Evaluating layer 13/40
+Evaluating layer 14/40
+Evaluating layer 15/40
+Evaluating layer 16/40
+Evaluating layer 17/40
+Evaluating layer 18/40
+Evaluating layer 19/40
+Evaluating layer 20/40
+Evaluating layer 21/40
+Evaluating layer 22/40
+Evaluating layer 23/40
+Evaluating layer 24/40
+Evaluating layer 25/40
+Evaluating layer 26/40
+Evaluating layer 27/40
+Evaluating layer 28/40
+Evaluating layer 29/40
+Evaluating layer 30/40
+Evaluating layer 31/40
+Evaluating layer 32/40
+Evaluating layer 33/40
+Evaluating layer 34/40
+Evaluating layer 35/40
+Evaluating layer 36/40
+Evaluating layer 37/40
+Evaluating layer 38/40
+Evaluating layer 39/40
+Perplexity: 5.79
+
+结果: Perplexity on wikitext2: 5.790
+评估时间: 223.19秒
+
+================================================================================
+评估数据集: ptb
+================================================================================
+Evaluating ...
+Evaluating layer 0/40
+Evaluating layer 1/40
+Evaluating layer 2/40
+Evaluating layer 3/40
+Evaluating layer 4/40
+Evaluating layer 5/40
+Evaluating layer 6/40
+Evaluating layer 7/40
+Evaluating layer 8/40
+Evaluating layer 9/40
+Evaluating layer 10/40
+Evaluating layer 11/40
+Evaluating layer 12/40
+Evaluating layer 13/40
+Evaluating layer 14/40
+Evaluating layer 15/40
+Evaluating layer 16/40
+Evaluating layer 17/40
+Evaluating layer 18/40
+Evaluating layer 19/40
+Evaluating layer 20/40
+Evaluating layer 21/40
+Evaluating layer 22/40
+Evaluating layer 23/40
+Evaluating layer 24/40
+Evaluating layer 25/40
+Evaluating layer 26/40
+Evaluating layer 27/40
+Evaluating layer 28/40
+Evaluating layer 29/40
+Evaluating layer 30/40
+Evaluating layer 31/40
+Evaluating layer 32/40
+Evaluating layer 33/40
+Evaluating layer 34/40
+Evaluating layer 35/40
+Evaluating layer 36/40
+Evaluating layer 37/40
+Evaluating layer 38/40
+Evaluating layer 39/40
+Perplexity: 37.02
+
+结果: Perplexity on ptb: 37.018
+评估时间: 86.63秒
+
+================================================================================
+评估数据集: c4
+================================================================================
+Evaluating ...
+Evaluating layer 0/40
+Traceback (most recent call last):
+  File "/media/user/data3/toky/Projects/SparseGPT/vicuna-13b-v1.5/test_baseline.py", line 173, in <module>
+    ppl = vicuna_eval(model, testloader, DEV)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/media/user/data3/toky/Projects/SparseGPT/vicuna-13b-v1.5/test_baseline.py", line 98, in vicuna_eval
+    outs[j] = layer(inps[j].unsqueeze(0), attention_mask=attention_mask, position_ids=position_ids)[0]
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 292, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py", line 231, in forward
+    attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query_states.dtype)
+  File "/media/user/data3/toky/CondaEnvs/SparseGPT/lib/python3.10/site-packages/torch/nn/functional.py", line 1845, in softmax
+    ret = input.softmax(dim, dtype=dtype)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.50 GiB (GPU 0; 79.18 GiB total capacity; 13.86 GiB already allocated; 1.05 GiB free; 16.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+=== 测试完成 ===
+日志保存在: /media/user/data3/toky/Projects/SparseGPT/vicuna-13b-v1.5/baseline_test.log
+结果保存在: /media/user/data3/toky/Projects/SparseGPT/vicuna-13b-v1.5/baseline_results.json

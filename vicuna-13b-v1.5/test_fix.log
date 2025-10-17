@@ -1,0 +1,5229 @@
+Loading Vicuna model: /mnt/share/HuggingfaceModels/lmsys/vicuna-13b-v1.5
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:16,  8.31s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:15<00:07,  7.85s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:20<00:00,  6.55s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:20<00:00,  6.95s/it]
+Token indices sequence length is longer than the specified maximum sequence length for this model (4430 > 4096). Running this sequence through the model will result in indexing errors
+Starting MI-based sequential pruning & quantization...
+  模型架构: llama
+  使用MI分组: 1
+  分组数: 5
+Ready to process layers.
+
+Processing layer_0.self_attn.q_proj (1/40) ...
+[layer_0.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_0.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_0.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 4.83 bits
+  ⚠ 需要调整比特分配
+[layer_0.self_attn.q_proj] MI分组比特分布: 4bit(4054) 8bit(1066) | 平均: 4.83 bits
+[layer_0.self_attn.q_proj] 时间: 6.07s | 误差: 7.2839
+
+Processing layer_0.self_attn.k_proj (1/40) ...
+[layer_0.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_0.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_0.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 4.83 bits
+  ⚠ 需要调整比特分配
+[layer_0.self_attn.k_proj] MI分组比特分布: 4bit(4054) 8bit(1066) | 平均: 4.83 bits
+[layer_0.self_attn.k_proj] 时间: 5.85s | 误差: 11.8558
+
+Processing layer_0.self_attn.v_proj (1/40) ...
+[layer_0.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_0.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_0.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 4.83 bits
+  ⚠ 需要调整比特分配
+[layer_0.self_attn.v_proj] MI分组比特分布: 4bit(4054) 8bit(1066) | 平均: 4.83 bits
+[layer_0.self_attn.v_proj] 时间: 5.83s | 误差: 30.5697
+
+Processing layer_0.self_attn.o_proj (1/40) ...
+[layer_0.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_0.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_0.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_0.self_attn.o_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_0.self_attn.o_proj] 时间: 5.74s | 误差: 1.9653
+
+Processing layer_0.mlp.gate_proj (1/40) ...
+[layer_0.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_0.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_0.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_0.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_0.mlp.gate_proj] 时间: 5.91s | 误差: 1210.3082
+
+Processing layer_0.mlp.down_proj (1/40) ...
+[layer_0.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_0.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_0.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.79 bits
+  ⚠ 需要调整比特分配
+[layer_0.mlp.down_proj] MI分组比特分布: 6bit(8363) 8bit(5461) | 平均: 6.79 bits
+[layer_0.mlp.down_proj] 时间: 27.54s | 误差: 15.4498
+
+Processing layer_0.mlp.up_proj (1/40) ...
+[layer_0.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_0.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_0.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_0.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_0.mlp.up_proj] 时间: 5.69s | 误差: 1159.3835
+
+Processing layer_1.self_attn.q_proj (2/40) ...
+[layer_1.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_1.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_1.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_1.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_1.self_attn.q_proj] 时间: 5.63s | 误差: 1211.8540
+
+Processing layer_1.self_attn.k_proj (2/40) ...
+[layer_1.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_1.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_1.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_1.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_1.self_attn.k_proj] 时间: 5.59s | 误差: 1304.0988
+
+Processing layer_1.self_attn.v_proj (2/40) ...
+[layer_1.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_1.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_1.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_1.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_1.self_attn.v_proj] 时间: 5.58s | 误差: 797.6168
+
+Processing layer_1.self_attn.o_proj (2/40) ...
+[layer_1.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_1.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_1.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.03 bits
+  ⚠ 需要调整比特分配
+[layer_1.self_attn.o_proj] MI分组比特分布: 4bit(849) 6bit(787) 8bit(3484) | 平均: 7.03 bits
+[layer_1.self_attn.o_proj] 时间: 5.52s | 误差: 76.1527
+
+Processing layer_1.mlp.gate_proj (2/40) ...
+[layer_1.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_1.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_1.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_1.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_1.mlp.gate_proj] 时间: 5.78s | 误差: 7157.9834
+
+Processing layer_1.mlp.down_proj (2/40) ...
+[layer_1.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_1.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_1.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.87 bits
+  ⚠ 需要调整比特分配
+[layer_1.mlp.down_proj] MI分组比特分布: 6bit(7807) 8bit(6017) | 平均: 6.87 bits
+[layer_1.mlp.down_proj] 时间: 26.56s | 误差: 171.7473
+
+Processing layer_1.mlp.up_proj (2/40) ...
+[layer_1.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_1.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_1.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_1.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_1.mlp.up_proj] 时间: 5.88s | 误差: 6445.0996
+
+Processing layer_2.self_attn.q_proj (3/40) ...
+[layer_2.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_2.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_2.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_2.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_2.self_attn.q_proj] 时间: 5.79s | 误差: 14645.7148
+
+Processing layer_2.self_attn.k_proj (3/40) ...
+[layer_2.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_2.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_2.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_2.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_2.self_attn.k_proj] 时间: 5.70s | 误差: 13826.1182
+
+Processing layer_2.self_attn.v_proj (3/40) ...
+[layer_2.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_2.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_2.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_2.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_2.self_attn.v_proj] 时间: 5.68s | 误差: 6931.5283
+
+Processing layer_2.self_attn.o_proj (3/40) ...
+[layer_2.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_2.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_2.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.95 bits
+  ⚠ 需要调整比特分配
+[layer_2.self_attn.o_proj] MI分组比特分布: 6bit(133) 8bit(4987) | 平均: 7.95 bits
+[layer_2.self_attn.o_proj] 时间: 5.46s | 误差: 174.7839
+
+Processing layer_2.mlp.gate_proj (3/40) ...
+[layer_2.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_2.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_2.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_2.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_2.mlp.gate_proj] 时间: 5.72s | 误差: 24964.7051
+
+Processing layer_2.mlp.down_proj (3/40) ...
+[layer_2.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_2.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_2.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_2.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_2.mlp.down_proj] 时间: 26.48s | 误差: 543.5082
+
+Processing layer_2.mlp.up_proj (3/40) ...
+[layer_2.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_2.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_2.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_2.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_2.mlp.up_proj] 时间: 5.75s | 误差: 21427.9238
+
+Processing layer_3.self_attn.q_proj (4/40) ...
+[layer_3.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_3.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_3.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_3.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_3.self_attn.q_proj] 时间: 5.85s | 误差: 28167.2109
+
+Processing layer_3.self_attn.k_proj (4/40) ...
+[layer_3.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_3.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_3.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_3.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_3.self_attn.k_proj] 时间: 5.88s | 误差: 27163.1602
+
+Processing layer_3.self_attn.v_proj (4/40) ...
+[layer_3.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_3.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_3.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_3.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_3.self_attn.v_proj] 时间: 5.84s | 误差: 12603.5762
+
+Processing layer_3.self_attn.o_proj (4/40) ...
+[layer_3.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_3.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_3.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.91 bits
+  ⚠ 需要调整比特分配
+[layer_3.self_attn.o_proj] MI分组比特分布: 6bit(242) 8bit(4878) | 平均: 7.91 bits
+[layer_3.self_attn.o_proj] 时间: 5.57s | 误差: 320.2446
+
+Processing layer_3.mlp.gate_proj (4/40) ...
+[layer_3.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_3.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_3.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_3.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_3.mlp.gate_proj] 时间: 5.83s | 误差: 46874.6094
+
+Processing layer_3.mlp.down_proj (4/40) ...
+[layer_3.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_3.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_3.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.94 bits
+  ⚠ 需要调整比特分配
+[layer_3.mlp.down_proj] MI分组比特分布: 6bit(7301) 8bit(6523) | 平均: 6.94 bits
+[layer_3.mlp.down_proj] 时间: 26.43s | 误差: 1695.0195
+
+Processing layer_3.mlp.up_proj (4/40) ...
+[layer_3.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_3.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_3.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_3.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_3.mlp.up_proj] 时间: 5.73s | 误差: 40373.1133
+
+Processing layer_4.self_attn.q_proj (5/40) ...
+[layer_4.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_4.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_4.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_4.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_4.self_attn.q_proj] 时间: 5.88s | 误差: 66331.4922
+
+Processing layer_4.self_attn.k_proj (5/40) ...
+[layer_4.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_4.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_4.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_4.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_4.self_attn.k_proj] 时间: 5.79s | 误差: 64422.0312
+
+Processing layer_4.self_attn.v_proj (5/40) ...
+[layer_4.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_4.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_4.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_4.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_4.self_attn.v_proj] 时间: 5.86s | 误差: 29221.6738
+
+Processing layer_4.self_attn.o_proj (5/40) ...
+[layer_4.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_4.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_4.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.78 bits
+  ⚠ 需要调整比特分配
+[layer_4.self_attn.o_proj] MI分组比特分布: 4bit(98) 6bit(374) 8bit(4648) | 平均: 7.78 bits
+[layer_4.self_attn.o_proj] 时间: 5.48s | 误差: 490.9457
+
+Processing layer_4.mlp.gate_proj (5/40) ...
+[layer_4.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_4.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_4.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_4.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_4.mlp.gate_proj] 时间: 5.80s | 误差: 67449.1484
+
+Processing layer_4.mlp.down_proj (5/40) ...
+[layer_4.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_4.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_4.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_4.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_4.mlp.down_proj] 时间: 27.05s | 误差: 1963.1224
+
+Processing layer_4.mlp.up_proj (5/40) ...
+[layer_4.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_4.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_4.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_4.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_4.mlp.up_proj] 时间: 5.73s | 误差: 57724.2227
+
+Processing layer_5.self_attn.q_proj (6/40) ...
+[layer_5.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_5.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_5.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_5.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_5.self_attn.q_proj] 时间: 5.72s | 误差: 79222.2422
+
+Processing layer_5.self_attn.k_proj (6/40) ...
+[layer_5.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_5.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_5.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_5.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_5.self_attn.k_proj] 时间: 5.74s | 误差: 75830.2891
+
+Processing layer_5.self_attn.v_proj (6/40) ...
+[layer_5.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_5.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_5.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_5.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_5.self_attn.v_proj] 时间: 5.71s | 误差: 39134.1445
+
+Processing layer_5.self_attn.o_proj (6/40) ...
+[layer_5.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_5.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_5.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.74 bits
+  ⚠ 需要调整比特分配
+[layer_5.self_attn.o_proj] MI分组比特分布: 6bit(666) 8bit(4454) | 平均: 7.74 bits
+[layer_5.self_attn.o_proj] 时间: 5.46s | 误差: 884.9407
+
+Processing layer_5.mlp.gate_proj (6/40) ...
+[layer_5.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_5.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_5.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_5.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_5.mlp.gate_proj] 时间: 5.86s | 误差: 95107.8047
+
+Processing layer_5.mlp.down_proj (6/40) ...
+[layer_5.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_5.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_5.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_5.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_5.mlp.down_proj] 时间: 27.02s | 误差: 3257.3262
+
+Processing layer_5.mlp.up_proj (6/40) ...
+[layer_5.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_5.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_5.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_5.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_5.mlp.up_proj] 时间: 5.94s | 误差: 79727.1250
+
+Processing layer_6.self_attn.q_proj (7/40) ...
+[layer_6.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_6.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_6.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_6.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_6.self_attn.q_proj] 时间: 5.74s | 误差: 114486.2266
+
+Processing layer_6.self_attn.k_proj (7/40) ...
+[layer_6.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_6.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_6.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_6.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_6.self_attn.k_proj] 时间: 5.73s | 误差: 112891.8672
+
+Processing layer_6.self_attn.v_proj (7/40) ...
+[layer_6.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_6.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_6.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_6.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_6.self_attn.v_proj] 时间: 5.70s | 误差: 55091.8984
+
+Processing layer_6.self_attn.o_proj (7/40) ...
+[layer_6.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_6.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_6.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.58 bits
+  ⚠ 需要调整比特分配
+[layer_6.self_attn.o_proj] MI分组比特分布: 6bit(1070) 8bit(4050) | 平均: 7.58 bits
+[layer_6.self_attn.o_proj] 时间: 5.51s | 误差: 1145.0447
+
+Processing layer_6.mlp.gate_proj (7/40) ...
+[layer_6.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_6.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_6.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_6.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_6.mlp.gate_proj] 时间: 5.77s | 误差: 124149.6406
+
+Processing layer_6.mlp.down_proj (7/40) ...
+[layer_6.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_6.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_6.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_6.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_6.mlp.down_proj] 时间: 27.37s | 误差: 4615.8320
+
+Processing layer_6.mlp.up_proj (7/40) ...
+[layer_6.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_6.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_6.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_6.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_6.mlp.up_proj] 时间: 5.67s | 误差: 102288.6094
+
+Processing layer_7.self_attn.q_proj (8/40) ...
+[layer_7.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_7.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_7.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_7.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_7.self_attn.q_proj] 时间: 5.75s | 误差: 115543.1250
+
+Processing layer_7.self_attn.k_proj (8/40) ...
+[layer_7.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_7.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_7.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_7.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_7.self_attn.k_proj] 时间: 5.75s | 误差: 113909.4688
+
+Processing layer_7.self_attn.v_proj (8/40) ...
+[layer_7.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_7.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_7.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_7.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_7.self_attn.v_proj] 时间: 5.73s | 误差: 55747.9336
+
+Processing layer_7.self_attn.o_proj (8/40) ...
+[layer_7.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_7.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_7.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.82 bits
+  ⚠ 需要调整比特分配
+[layer_7.self_attn.o_proj] MI分组比特分布: 4bit(127) 6bit(196) 8bit(4797) | 平均: 7.82 bits
+[layer_7.self_attn.o_proj] 时间: 5.50s | 误差: 1771.8250
+
+Processing layer_7.mlp.gate_proj (8/40) ...
+[layer_7.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_7.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_7.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_7.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_7.mlp.gate_proj] 时间: 5.87s | 误差: 143700.5312
+
+Processing layer_7.mlp.down_proj (8/40) ...
+[layer_7.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_7.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_7.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.00 bits
+  ⚠ 需要调整比特分配
+[layer_7.mlp.down_proj] MI分组比特分布: 6bit(13815) 8bit(9) | 平均: 6.00 bits
+[layer_7.mlp.down_proj] 时间: 27.10s | 误差: 6009.2207
+
+Processing layer_7.mlp.up_proj (8/40) ...
+[layer_7.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_7.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_7.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_7.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_7.mlp.up_proj] 时间: 5.85s | 误差: 118555.4844
+
+Processing layer_8.self_attn.q_proj (9/40) ...
+[layer_8.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_8.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_8.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_8.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_8.self_attn.q_proj] 时间: 5.89s | 误差: 143372.2812
+
+Processing layer_8.self_attn.k_proj (9/40) ...
+[layer_8.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_8.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_8.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_8.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_8.self_attn.k_proj] 时间: 5.88s | 误差: 141252.4531
+
+Processing layer_8.self_attn.v_proj (9/40) ...
+[layer_8.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_8.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_8.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_8.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_8.self_attn.v_proj] 时间: 5.86s | 误差: 72217.6094
+
+Processing layer_8.self_attn.o_proj (9/40) ...
+[layer_8.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_8.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_8.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.95 bits
+  ⚠ 需要调整比特分配
+[layer_8.self_attn.o_proj] MI分组比特分布: 6bit(127) 8bit(4993) | 平均: 7.95 bits
+[layer_8.self_attn.o_proj] 时间: 5.62s | 误差: 2272.3628
+
+Processing layer_8.mlp.gate_proj (9/40) ...
+[layer_8.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_8.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_8.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_8.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_8.mlp.gate_proj] 时间: 5.88s | 误差: 159502.5938
+
+Processing layer_8.mlp.down_proj (9/40) ...
+[layer_8.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_8.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_8.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_8.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_8.mlp.down_proj] 时间: 26.63s | 误差: 7695.1592
+
+Processing layer_8.mlp.up_proj (9/40) ...
+[layer_8.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_8.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_8.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_8.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_8.mlp.up_proj] 时间: 5.72s | 误差: 134966.5938
+
+Processing layer_9.self_attn.q_proj (10/40) ...
+[layer_9.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_9.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_9.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_9.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_9.self_attn.q_proj] 时间: 5.77s | 误差: 173341.0625
+
+Processing layer_9.self_attn.k_proj (10/40) ...
+[layer_9.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_9.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_9.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_9.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_9.self_attn.k_proj] 时间: 5.76s | 误差: 169949.1875
+
+Processing layer_9.self_attn.v_proj (10/40) ...
+[layer_9.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_9.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_9.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_9.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_9.self_attn.v_proj] 时间: 5.76s | 误差: 86900.5781
+
+Processing layer_9.self_attn.o_proj (10/40) ...
+[layer_9.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_9.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_9.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.75 bits
+  ⚠ 需要调整比特分配
+[layer_9.self_attn.o_proj] MI分组比特分布: 6bit(640) 8bit(4480) | 平均: 7.75 bits
+[layer_9.self_attn.o_proj] 时间: 5.48s | 误差: 3655.4238
+
+Processing layer_9.mlp.gate_proj (10/40) ...
+[layer_9.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_9.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_9.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_9.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_9.mlp.gate_proj] 时间: 5.67s | 误差: 175641.5781
+
+Processing layer_9.mlp.down_proj (10/40) ...
+[layer_9.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_9.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_9.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_9.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_9.mlp.down_proj] 时间: 27.23s | 误差: 9638.0586
+
+Processing layer_9.mlp.up_proj (10/40) ...
+[layer_9.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_9.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_9.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_9.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_9.mlp.up_proj] 时间: 5.70s | 误差: 154282.9844
+
+Processing layer_10.self_attn.q_proj (11/40) ...
+[layer_10.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_10.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_10.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_10.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_10.self_attn.q_proj] 时间: 5.79s | 误差: 175888.1094
+
+Processing layer_10.self_attn.k_proj (11/40) ...
+[layer_10.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_10.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_10.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_10.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_10.self_attn.k_proj] 时间: 5.75s | 误差: 173113.2344
+
+Processing layer_10.self_attn.v_proj (11/40) ...
+[layer_10.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_10.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_10.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_10.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_10.self_attn.v_proj] 时间: 5.74s | 误差: 87594.3203
+
+Processing layer_10.self_attn.o_proj (11/40) ...
+[layer_10.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_10.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_10.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.70 bits
+  ⚠ 需要调整比特分配
+[layer_10.self_attn.o_proj] MI分组比特分布: 4bit(390) 8bit(4730) | 平均: 7.70 bits
+[layer_10.self_attn.o_proj] 时间: 5.60s | 误差: 5255.3042
+
+Processing layer_10.mlp.gate_proj (11/40) ...
+[layer_10.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_10.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_10.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_10.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_10.mlp.gate_proj] 时间: 5.73s | 误差: 183353.2500
+
+Processing layer_10.mlp.down_proj (11/40) ...
+[layer_10.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_10.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_10.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_10.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_10.mlp.down_proj] 时间: 26.65s | 误差: 11672.7207
+
+Processing layer_10.mlp.up_proj (11/40) ...
+[layer_10.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_10.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_10.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_10.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_10.mlp.up_proj] 时间: 5.69s | 误差: 167410.4688
+
+Processing layer_11.self_attn.q_proj (12/40) ...
+[layer_11.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_11.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_11.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_11.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_11.self_attn.q_proj] 时间: 5.70s | 误差: 183195.8750
+
+Processing layer_11.self_attn.k_proj (12/40) ...
+[layer_11.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_11.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_11.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_11.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_11.self_attn.k_proj] 时间: 5.68s | 误差: 182624.7969
+
+Processing layer_11.self_attn.v_proj (12/40) ...
+[layer_11.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_11.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_11.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_11.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_11.self_attn.v_proj] 时间: 5.68s | 误差: 85540.8125
+
+Processing layer_11.self_attn.o_proj (12/40) ...
+[layer_11.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_11.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_11.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.79 bits
+  ⚠ 需要调整比特分配
+[layer_11.self_attn.o_proj] MI分组比特分布: 4bit(264) 8bit(4856) | 平均: 7.79 bits
+[layer_11.self_attn.o_proj] 时间: 5.59s | 误差: 5910.9233
+
+Processing layer_11.mlp.gate_proj (12/40) ...
+[layer_11.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_11.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_11.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_11.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_11.mlp.gate_proj] 时间: 5.71s | 误差: 184878.9062
+
+Processing layer_11.mlp.down_proj (12/40) ...
+[layer_11.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_11.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_11.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_11.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_11.mlp.down_proj] 时间: 27.05s | 误差: 13224.0879
+
+Processing layer_11.mlp.up_proj (12/40) ...
+[layer_11.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_11.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_11.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_11.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_11.mlp.up_proj] 时间: 5.69s | 误差: 175878.2656
+
+Processing layer_12.self_attn.q_proj (13/40) ...
+[layer_12.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_12.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_12.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_12.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_12.self_attn.q_proj] 时间: 5.75s | 误差: 199025.6875
+
+Processing layer_12.self_attn.k_proj (13/40) ...
+[layer_12.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_12.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_12.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_12.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_12.self_attn.k_proj] 时间: 5.75s | 误差: 196875.5000
+
+Processing layer_12.self_attn.v_proj (13/40) ...
+[layer_12.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_12.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_12.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_12.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_12.self_attn.v_proj] 时间: 5.73s | 误差: 105867.2656
+
+Processing layer_12.self_attn.o_proj (13/40) ...
+[layer_12.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_12.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_12.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_12.self_attn.o_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_12.self_attn.o_proj] 时间: 5.49s | 误差: 7648.4375
+
+Processing layer_12.mlp.gate_proj (13/40) ...
+[layer_12.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_12.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_12.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_12.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_12.mlp.gate_proj] 时间: 5.70s | 误差: 193994.9062
+
+Processing layer_12.mlp.down_proj (13/40) ...
+[layer_12.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_12.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_12.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_12.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_12.mlp.down_proj] 时间: 27.03s | 误差: 14784.4707
+
+Processing layer_12.mlp.up_proj (13/40) ...
+[layer_12.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_12.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_12.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_12.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_12.mlp.up_proj] 时间: 5.77s | 误差: 188908.6094
+
+Processing layer_13.self_attn.q_proj (14/40) ...
+[layer_13.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_13.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_13.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_13.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_13.self_attn.q_proj] 时间: 5.70s | 误差: 215539.1250
+
+Processing layer_13.self_attn.k_proj (14/40) ...
+[layer_13.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_13.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_13.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_13.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_13.self_attn.k_proj] 时间: 5.73s | 误差: 206973.0938
+
+Processing layer_13.self_attn.v_proj (14/40) ...
+[layer_13.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_13.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_13.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_13.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_13.self_attn.v_proj] 时间: 5.73s | 误差: 130674.7969
+
+Processing layer_13.self_attn.o_proj (14/40) ...
+[layer_13.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_13.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_13.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.71 bits
+  ⚠ 需要调整比特分配
+[layer_13.self_attn.o_proj] MI分组比特分布: 6bit(733) 8bit(4387) | 平均: 7.71 bits
+[layer_13.self_attn.o_proj] 时间: 5.55s | 误差: 9072.6055
+
+Processing layer_13.mlp.gate_proj (14/40) ...
+[layer_13.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_13.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_13.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_13.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_13.mlp.gate_proj] 时间: 5.70s | 误差: 210235.6250
+
+Processing layer_13.mlp.down_proj (14/40) ...
+[layer_13.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_13.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_13.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_13.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_13.mlp.down_proj] 时间: 26.99s | 误差: 16796.4961
+
+Processing layer_13.mlp.up_proj (14/40) ...
+[layer_13.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_13.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_13.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_13.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_13.mlp.up_proj] 时间: 5.69s | 误差: 208002.3125
+
+Processing layer_14.self_attn.q_proj (15/40) ...
+[layer_14.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_14.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_14.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_14.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_14.self_attn.q_proj] 时间: 5.74s | 误差: 237241.7188
+
+Processing layer_14.self_attn.k_proj (15/40) ...
+[layer_14.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_14.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_14.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_14.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_14.self_attn.k_proj] 时间: 5.71s | 误差: 234866.5938
+
+Processing layer_14.self_attn.v_proj (15/40) ...
+[layer_14.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_14.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_14.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_14.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_14.self_attn.v_proj] 时间: 5.65s | 误差: 129310.6719
+
+Processing layer_14.self_attn.o_proj (15/40) ...
+[layer_14.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_14.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_14.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_14.self_attn.o_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_14.self_attn.o_proj] 时间: 5.57s | 误差: 10283.4160
+
+Processing layer_14.mlp.gate_proj (15/40) ...
+[layer_14.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_14.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_14.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_14.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_14.mlp.gate_proj] 时间: 5.76s | 误差: 226905.1406
+
+Processing layer_14.mlp.down_proj (15/40) ...
+[layer_14.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_14.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_14.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_14.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_14.mlp.down_proj] 时间: 26.64s | 误差: 19597.8477
+
+Processing layer_14.mlp.up_proj (15/40) ...
+[layer_14.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_14.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_14.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_14.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_14.mlp.up_proj] 时间: 5.64s | 误差: 227378.2500
+
+Processing layer_15.self_attn.q_proj (16/40) ...
+[layer_15.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_15.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_15.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_15.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_15.self_attn.q_proj] 时间: 5.78s | 误差: 227777.8750
+
+Processing layer_15.self_attn.k_proj (16/40) ...
+[layer_15.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_15.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_15.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_15.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_15.self_attn.k_proj] 时间: 5.64s | 误差: 228293.0625
+
+Processing layer_15.self_attn.v_proj (16/40) ...
+[layer_15.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_15.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_15.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_15.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_15.self_attn.v_proj] 时间: 5.77s | 误差: 133974.5938
+
+Processing layer_15.self_attn.o_proj (16/40) ...
+[layer_15.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_15.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_15.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_15.self_attn.o_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_15.self_attn.o_proj] 时间: 5.49s | 误差: 11277.5273
+
+Processing layer_15.mlp.gate_proj (16/40) ...
+[layer_15.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_15.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_15.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_15.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_15.mlp.gate_proj] 时间: 5.66s | 误差: 242284.4375
+
+Processing layer_15.mlp.down_proj (16/40) ...
+[layer_15.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_15.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_15.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_15.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_15.mlp.down_proj] 时间: 26.11s | 误差: 21871.7480
+
+Processing layer_15.mlp.up_proj (16/40) ...
+[layer_15.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_15.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_15.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_15.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_15.mlp.up_proj] 时间: 5.66s | 误差: 245682.6875
+
+Processing layer_16.self_attn.q_proj (17/40) ...
+[layer_16.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_16.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_16.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_16.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_16.self_attn.q_proj] 时间: 5.68s | 误差: 249541.1562
+
+Processing layer_16.self_attn.k_proj (17/40) ...
+[layer_16.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_16.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_16.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_16.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_16.self_attn.k_proj] 时间: 5.70s | 误差: 248644.8438
+
+Processing layer_16.self_attn.v_proj (17/40) ...
+[layer_16.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_16.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_16.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_16.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_16.self_attn.v_proj] 时间: 5.71s | 误差: 151406.1250
+
+Processing layer_16.self_attn.o_proj (17/40) ...
+[layer_16.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_16.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_16.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.66 bits
+  ⚠ 需要调整比特分配
+[layer_16.self_attn.o_proj] MI分组比特分布: 6bit(878) 8bit(4242) | 平均: 7.66 bits
+[layer_16.self_attn.o_proj] 时间: 5.52s | 误差: 11435.7471
+
+Processing layer_16.mlp.gate_proj (17/40) ...
+[layer_16.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_16.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_16.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_16.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_16.mlp.gate_proj] 时间: 5.73s | 误差: 266420.2500
+
+Processing layer_16.mlp.down_proj (17/40) ...
+[layer_16.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_16.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_16.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_16.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_16.mlp.down_proj] 时间: 26.82s | 误差: 26318.0352
+
+Processing layer_16.mlp.up_proj (17/40) ...
+[layer_16.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_16.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_16.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_16.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_16.mlp.up_proj] 时间: 5.71s | 误差: 267927.9688
+
+Processing layer_17.self_attn.q_proj (18/40) ...
+[layer_17.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_17.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_17.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_17.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_17.self_attn.q_proj] 时间: 5.70s | 误差: 247679.8438
+
+Processing layer_17.self_attn.k_proj (18/40) ...
+[layer_17.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_17.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_17.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_17.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_17.self_attn.k_proj] 时间: 5.71s | 误差: 246240.4375
+
+Processing layer_17.self_attn.v_proj (18/40) ...
+[layer_17.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_17.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_17.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_17.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_17.self_attn.v_proj] 时间: 5.78s | 误差: 154664.5312
+
+Processing layer_17.self_attn.o_proj (18/40) ...
+[layer_17.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_17.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_17.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.91 bits
+  ⚠ 需要调整比特分配
+[layer_17.self_attn.o_proj] MI分组比特分布: 4bit(118) 8bit(5002) | 平均: 7.91 bits
+[layer_17.self_attn.o_proj] 时间: 5.54s | 误差: 11570.8262
+
+Processing layer_17.mlp.gate_proj (18/40) ...
+[layer_17.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_17.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_17.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_17.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_17.mlp.gate_proj] 时间: 5.79s | 误差: 295951.0000
+
+Processing layer_17.mlp.down_proj (18/40) ...
+[layer_17.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_17.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_17.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_17.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_17.mlp.down_proj] 时间: 26.75s | 误差: 28514.0117
+
+Processing layer_17.mlp.up_proj (18/40) ...
+[layer_17.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_17.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_17.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_17.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_17.mlp.up_proj] 时间: 5.70s | 误差: 289453.5625
+
+Processing layer_18.self_attn.q_proj (19/40) ...
+[layer_18.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_18.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_18.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_18.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_18.self_attn.q_proj] 时间: 5.74s | 误差: 270263.4375
+
+Processing layer_18.self_attn.k_proj (19/40) ...
+[layer_18.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_18.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_18.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_18.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_18.self_attn.k_proj] 时间: 5.59s | 误差: 271469.5000
+
+Processing layer_18.self_attn.v_proj (19/40) ...
+[layer_18.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_18.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_18.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_18.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_18.self_attn.v_proj] 时间: 5.76s | 误差: 173648.7188
+
+Processing layer_18.self_attn.o_proj (19/40) ...
+[layer_18.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_18.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_18.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_18.self_attn.o_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_18.self_attn.o_proj] 时间: 5.62s | 误差: 12369.6895
+
+Processing layer_18.mlp.gate_proj (19/40) ...
+[layer_18.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_18.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_18.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_18.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_18.mlp.gate_proj] 时间: 5.91s | 误差: 326299.9375
+
+Processing layer_18.mlp.down_proj (19/40) ...
+[layer_18.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_18.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_18.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_18.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_18.mlp.down_proj] 时间: 26.70s | 误差: 30948.6621
+
+Processing layer_18.mlp.up_proj (19/40) ...
+[layer_18.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_18.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_18.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_18.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_18.mlp.up_proj] 时间: 5.88s | 误差: 312748.0625
+
+Processing layer_19.self_attn.q_proj (20/40) ...
+[layer_19.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_19.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_19.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_19.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_19.self_attn.q_proj] 时间: 5.79s | 误差: 256260.1250
+
+Processing layer_19.self_attn.k_proj (20/40) ...
+[layer_19.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_19.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_19.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_19.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_19.self_attn.k_proj] 时间: 5.68s | 误差: 256023.7656
+
+Processing layer_19.self_attn.v_proj (20/40) ...
+[layer_19.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_19.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_19.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_19.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_19.self_attn.v_proj] 时间: 5.66s | 误差: 178701.2500
+
+Processing layer_19.self_attn.o_proj (20/40) ...
+[layer_19.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_19.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_19.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.90 bits
+  ⚠ 需要调整比特分配
+[layer_19.self_attn.o_proj] MI分组比特分布: 4bit(129) 8bit(4991) | 平均: 7.90 bits
+[layer_19.self_attn.o_proj] 时间: 5.50s | 误差: 11581.0273
+
+Processing layer_19.mlp.gate_proj (20/40) ...
+[layer_19.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_19.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_19.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_19.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_19.mlp.gate_proj] 时间: 5.74s | 误差: 349410.7812
+
+Processing layer_19.mlp.down_proj (20/40) ...
+[layer_19.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_19.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_19.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_19.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_19.mlp.down_proj] 时间: 26.94s | 误差: 34097.0859
+
+Processing layer_19.mlp.up_proj (20/40) ...
+[layer_19.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_19.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_19.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_19.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_19.mlp.up_proj] 时间: 5.80s | 误差: 330594.4688
+
+Processing layer_20.self_attn.q_proj (21/40) ...
+[layer_20.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_20.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_20.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_20.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_20.self_attn.q_proj] 时间: 5.69s | 误差: 244360.7031
+
+Processing layer_20.self_attn.k_proj (21/40) ...
+[layer_20.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_20.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_20.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_20.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_20.self_attn.k_proj] 时间: 5.79s | 误差: 243462.5938
+
+Processing layer_20.self_attn.v_proj (21/40) ...
+[layer_20.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_20.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_20.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_20.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_20.self_attn.v_proj] 时间: 5.69s | 误差: 163029.9219
+
+Processing layer_20.self_attn.o_proj (21/40) ...
+[layer_20.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_20.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_20.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_20.self_attn.o_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_20.self_attn.o_proj] 时间: 5.50s | 误差: 14901.1328
+
+Processing layer_20.mlp.gate_proj (21/40) ...
+[layer_20.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_20.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_20.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_20.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_20.mlp.gate_proj] 时间: 5.74s | 误差: 367212.4375
+
+Processing layer_20.mlp.down_proj (21/40) ...
+[layer_20.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_20.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_20.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_20.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_20.mlp.down_proj] 时间: 26.67s | 误差: 37677.3906
+
+Processing layer_20.mlp.up_proj (21/40) ...
+[layer_20.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_20.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_20.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_20.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_20.mlp.up_proj] 时间: 5.73s | 误差: 344924.8750
+
+Processing layer_21.self_attn.q_proj (22/40) ...
+[layer_21.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_21.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_21.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_21.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_21.self_attn.q_proj] 时间: 5.77s | 误差: 251055.2812
+
+Processing layer_21.self_attn.k_proj (22/40) ...
+[layer_21.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_21.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_21.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_21.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_21.self_attn.k_proj] 时间: 5.78s | 误差: 246447.8750
+
+Processing layer_21.self_attn.v_proj (22/40) ...
+[layer_21.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_21.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_21.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_21.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_21.self_attn.v_proj] 时间: 6.38s | 误差: 188824.8125
+
+Processing layer_21.self_attn.o_proj (22/40) ...
+[layer_21.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_21.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_21.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.82 bits
+  ⚠ 需要调整比特分配
+[layer_21.self_attn.o_proj] MI分组比特分布: 6bit(470) 8bit(4650) | 平均: 7.82 bits
+[layer_21.self_attn.o_proj] 时间: 5.63s | 误差: 17399.5352
+
+Processing layer_21.mlp.gate_proj (22/40) ...
+[layer_21.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_21.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_21.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_21.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_21.mlp.gate_proj] 时间: 5.65s | 误差: 388540.8438
+
+Processing layer_21.mlp.down_proj (22/40) ...
+[layer_21.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_21.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_21.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_21.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_21.mlp.down_proj] 时间: 26.14s | 误差: 43050.8477
+
+Processing layer_21.mlp.up_proj (22/40) ...
+[layer_21.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_21.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_21.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_21.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_21.mlp.up_proj] 时间: 5.62s | 误差: 356261.4062
+
+Processing layer_22.self_attn.q_proj (23/40) ...
+[layer_22.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_22.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_22.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_22.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_22.self_attn.q_proj] 时间: 5.73s | 误差: 289347.6875
+
+Processing layer_22.self_attn.k_proj (23/40) ...
+[layer_22.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_22.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_22.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_22.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_22.self_attn.k_proj] 时间: 5.68s | 误差: 292263.8125
+
+Processing layer_22.self_attn.v_proj (23/40) ...
+[layer_22.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_22.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_22.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_22.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_22.self_attn.v_proj] 时间: 5.68s | 误差: 229217.3750
+
+Processing layer_22.self_attn.o_proj (23/40) ...
+[layer_22.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_22.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_22.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.76 bits
+  ⚠ 需要调整比特分配
+[layer_22.self_attn.o_proj] MI分组比特分布: 6bit(608) 8bit(4512) | 平均: 7.76 bits
+[layer_22.self_attn.o_proj] 时间: 5.47s | 误差: 12251.0049
+
+Processing layer_22.mlp.gate_proj (23/40) ...
+[layer_22.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_22.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_22.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_22.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_22.mlp.gate_proj] 时间: 5.74s | 误差: 422707.4375
+
+Processing layer_22.mlp.down_proj (23/40) ...
+[layer_22.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_22.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_22.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_22.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_22.mlp.down_proj] 时间: 25.60s | 误差: 45160.6953
+
+Processing layer_22.mlp.up_proj (23/40) ...
+[layer_22.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_22.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_22.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_22.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_22.mlp.up_proj] 时间: 5.68s | 误差: 378451.8125
+
+Processing layer_23.self_attn.q_proj (24/40) ...
+[layer_23.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_23.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_23.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_23.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_23.self_attn.q_proj] 时间: 5.68s | 误差: 269351.6562
+
+Processing layer_23.self_attn.k_proj (24/40) ...
+[layer_23.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_23.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_23.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_23.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_23.self_attn.k_proj] 时间: 5.69s | 误差: 267057.6250
+
+Processing layer_23.self_attn.v_proj (24/40) ...
+[layer_23.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_23.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_23.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_23.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_23.self_attn.v_proj] 时间: 5.73s | 误差: 224909.6406
+
+Processing layer_23.self_attn.o_proj (24/40) ...
+[layer_23.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_23.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_23.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.44 bits
+  ⚠ 需要调整比特分配
+[layer_23.self_attn.o_proj] MI分组比特分布: 4bit(590) 6bit(246) 8bit(4284) | 平均: 7.44 bits
+[layer_23.self_attn.o_proj] 时间: 5.41s | 误差: 13454.2148
+
+Processing layer_23.mlp.gate_proj (24/40) ...
+[layer_23.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_23.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_23.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_23.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_23.mlp.gate_proj] 时间: 5.73s | 误差: 446472.5938
+
+Processing layer_23.mlp.down_proj (24/40) ...
+[layer_23.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_23.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_23.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_23.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_23.mlp.down_proj] 时间: 25.69s | 误差: 46883.5977
+
+Processing layer_23.mlp.up_proj (24/40) ...
+[layer_23.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_23.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_23.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_23.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_23.mlp.up_proj] 时间: 5.64s | 误差: 392646.8125
+
+Processing layer_24.self_attn.q_proj (25/40) ...
+[layer_24.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_24.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_24.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_24.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_24.self_attn.q_proj] 时间: 5.69s | 误差: 283842.4375
+
+Processing layer_24.self_attn.k_proj (25/40) ...
+[layer_24.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_24.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_24.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_24.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_24.self_attn.k_proj] 时间: 6.17s | 误差: 283258.3750
+
+Processing layer_24.self_attn.v_proj (25/40) ...
+[layer_24.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_24.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_24.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_24.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_24.self_attn.v_proj] 时间: 5.86s | 误差: 234014.9688
+
+Processing layer_24.self_attn.o_proj (25/40) ...
+[layer_24.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_24.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_24.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.91 bits
+  ⚠ 需要调整比特分配
+[layer_24.self_attn.o_proj] MI分组比特分布: 4bit(112) 8bit(5008) | 平均: 7.91 bits
+[layer_24.self_attn.o_proj] 时间: 5.62s | 误差: 12859.1631
+
+Processing layer_24.mlp.gate_proj (25/40) ...
+[layer_24.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_24.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_24.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_24.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_24.mlp.gate_proj] 时间: 5.93s | 误差: 469743.7812
+
+Processing layer_24.mlp.down_proj (25/40) ...
+[layer_24.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_24.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_24.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_24.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_24.mlp.down_proj] 时间: 25.72s | 误差: 48304.5820
+
+Processing layer_24.mlp.up_proj (25/40) ...
+[layer_24.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_24.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_24.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_24.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_24.mlp.up_proj] 时间: 5.76s | 误差: 407114.8438
+
+Processing layer_25.self_attn.q_proj (26/40) ...
+[layer_25.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_25.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_25.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_25.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_25.self_attn.q_proj] 时间: 5.79s | 误差: 301531.8125
+
+Processing layer_25.self_attn.k_proj (26/40) ...
+[layer_25.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_25.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_25.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_25.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_25.self_attn.k_proj] 时间: 5.80s | 误差: 298621.4688
+
+Processing layer_25.self_attn.v_proj (26/40) ...
+[layer_25.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_25.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_25.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_25.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_25.self_attn.v_proj] 时间: 5.73s | 误差: 266451.7812
+
+Processing layer_25.self_attn.o_proj (26/40) ...
+[layer_25.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_25.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_25.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.48 bits
+  ⚠ 需要调整比特分配
+[layer_25.self_attn.o_proj] MI分组比特分布: 6bit(1320) 8bit(3800) | 平均: 7.48 bits
+[layer_25.self_attn.o_proj] 时间: 5.51s | 误差: 15439.4102
+
+Processing layer_25.mlp.gate_proj (26/40) ...
+[layer_25.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_25.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_25.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_25.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_25.mlp.gate_proj] 时间: 5.68s | 误差: 498393.2500
+
+Processing layer_25.mlp.down_proj (26/40) ...
+[layer_25.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_25.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_25.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_25.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_25.mlp.down_proj] 时间: 25.62s | 误差: 51902.0312
+
+Processing layer_25.mlp.up_proj (26/40) ...
+[layer_25.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_25.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_25.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_25.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_25.mlp.up_proj] 时间: 5.62s | 误差: 428271.0312
+
+Processing layer_26.self_attn.q_proj (27/40) ...
+[layer_26.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_26.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_26.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_26.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_26.self_attn.q_proj] 时间: 5.64s | 误差: 305866.6250
+
+Processing layer_26.self_attn.k_proj (27/40) ...
+[layer_26.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_26.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_26.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_26.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_26.self_attn.k_proj] 时间: 5.63s | 误差: 303273.8750
+
+Processing layer_26.self_attn.v_proj (27/40) ...
+[layer_26.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_26.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_26.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_26.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_26.self_attn.v_proj] 时间: 5.66s | 误差: 268905.8125
+
+Processing layer_26.self_attn.o_proj (27/40) ...
+[layer_26.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_26.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_26.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.80 bits
+  ⚠ 需要调整比特分配
+[layer_26.self_attn.o_proj] MI分组比特分布: 4bit(127) 6bit(259) 8bit(4734) | 平均: 7.80 bits
+[layer_26.self_attn.o_proj] 时间: 5.39s | 误差: 15456.6465
+
+Processing layer_26.mlp.gate_proj (27/40) ...
+[layer_26.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_26.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_26.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_26.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_26.mlp.gate_proj] 时间: 5.69s | 误差: 516372.2500
+
+Processing layer_26.mlp.down_proj (27/40) ...
+[layer_26.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_26.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_26.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_26.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_26.mlp.down_proj] 时间: 25.54s | 误差: 55573.3047
+
+Processing layer_26.mlp.up_proj (27/40) ...
+[layer_26.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_26.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_26.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_26.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_26.mlp.up_proj] 时间: 5.70s | 误差: 441388.3125
+
+Processing layer_27.self_attn.q_proj (28/40) ...
+[layer_27.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_27.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_27.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_27.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_27.self_attn.q_proj] 时间: 5.62s | 误差: 349569.6875
+
+Processing layer_27.self_attn.k_proj (28/40) ...
+[layer_27.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_27.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_27.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_27.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_27.self_attn.k_proj] 时间: 5.61s | 误差: 347967.6875
+
+Processing layer_27.self_attn.v_proj (28/40) ...
+[layer_27.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_27.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_27.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_27.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_27.self_attn.v_proj] 时间: 5.63s | 误差: 306380.7500
+
+Processing layer_27.self_attn.o_proj (28/40) ...
+[layer_27.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_27.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_27.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.81 bits
+  ⚠ 需要调整比特分配
+[layer_27.self_attn.o_proj] MI分组比特分布: 6bit(3042) 8bit(2078) | 平均: 6.81 bits
+[layer_27.self_attn.o_proj] 时间: 5.45s | 误差: 12994.5107
+
+Processing layer_27.mlp.gate_proj (28/40) ...
+[layer_27.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_27.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_27.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_27.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_27.mlp.gate_proj] 时间: 5.58s | 误差: 545214.5000
+
+Processing layer_27.mlp.down_proj (28/40) ...
+[layer_27.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_27.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_27.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_27.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_27.mlp.down_proj] 时间: 25.47s | 误差: 57915.3906
+
+Processing layer_27.mlp.up_proj (28/40) ...
+[layer_27.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_27.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_27.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_27.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_27.mlp.up_proj] 时间: 5.61s | 误差: 464324.5312
+
+Processing layer_28.self_attn.q_proj (29/40) ...
+[layer_28.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_28.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_28.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_28.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_28.self_attn.q_proj] 时间: 5.66s | 误差: 343531.5625
+
+Processing layer_28.self_attn.k_proj (29/40) ...
+[layer_28.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_28.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_28.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_28.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_28.self_attn.k_proj] 时间: 5.67s | 误差: 340887.6562
+
+Processing layer_28.self_attn.v_proj (29/40) ...
+[layer_28.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_28.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_28.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_28.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_28.self_attn.v_proj] 时间: 5.62s | 误差: 310765.3750
+
+Processing layer_28.self_attn.o_proj (29/40) ...
+[layer_28.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_28.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_28.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.59 bits
+  ⚠ 需要调整比特分配
+[layer_28.self_attn.o_proj] MI分组比特分布: 4bit(389) 6bit(272) 8bit(4459) | 平均: 7.59 bits
+[layer_28.self_attn.o_proj] 时间: 5.49s | 误差: 15246.1406
+
+Processing layer_28.mlp.gate_proj (29/40) ...
+[layer_28.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_28.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_28.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_28.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_28.mlp.gate_proj] 时间: 5.67s | 误差: 574070.1250
+
+Processing layer_28.mlp.down_proj (29/40) ...
+[layer_28.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_28.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_28.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_28.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_28.mlp.down_proj] 时间: 25.59s | 误差: 61836.1250
+
+Processing layer_28.mlp.up_proj (29/40) ...
+[layer_28.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_28.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_28.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_28.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_28.mlp.up_proj] 时间: 5.62s | 误差: 489845.5625
+
+Processing layer_29.self_attn.q_proj (30/40) ...
+[layer_29.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_29.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_29.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_29.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_29.self_attn.q_proj] 时间: 5.65s | 误差: 395775.4375
+
+Processing layer_29.self_attn.k_proj (30/40) ...
+[layer_29.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_29.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_29.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_29.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_29.self_attn.k_proj] 时间: 5.61s | 误差: 398666.8438
+
+Processing layer_29.self_attn.v_proj (30/40) ...
+[layer_29.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_29.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_29.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_29.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_29.self_attn.v_proj] 时间: 5.65s | 误差: 341113.9062
+
+Processing layer_29.self_attn.o_proj (30/40) ...
+[layer_29.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_29.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_29.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.98 bits
+  ⚠ 需要调整比特分配
+[layer_29.self_attn.o_proj] MI分组比特分布: 6bit(2605) 8bit(2515) | 平均: 6.98 bits
+[layer_29.self_attn.o_proj] 时间: 5.45s | 误差: 15363.7617
+
+Processing layer_29.mlp.gate_proj (30/40) ...
+[layer_29.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_29.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_29.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_29.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_29.mlp.gate_proj] 时间: 5.62s | 误差: 606788.7500
+
+Processing layer_29.mlp.down_proj (30/40) ...
+[layer_29.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_29.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_29.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_29.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_29.mlp.down_proj] 时间: 25.71s | 误差: 67669.2656
+
+Processing layer_29.mlp.up_proj (30/40) ...
+[layer_29.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_29.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_29.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_29.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_29.mlp.up_proj] 时间: 5.66s | 误差: 522341.8125
+
+Processing layer_30.self_attn.q_proj (31/40) ...
+[layer_30.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_30.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_30.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_30.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_30.self_attn.q_proj] 时间: 5.57s | 误差: 430366.5000
+
+Processing layer_30.self_attn.k_proj (31/40) ...
+[layer_30.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_30.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_30.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_30.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_30.self_attn.k_proj] 时间: 5.52s | 误差: 429539.5938
+
+Processing layer_30.self_attn.v_proj (31/40) ...
+[layer_30.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_30.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_30.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_30.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_30.self_attn.v_proj] 时间: 5.57s | 误差: 405919.0000
+
+Processing layer_30.self_attn.o_proj (31/40) ...
+[layer_30.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_30.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_30.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.75 bits
+  ⚠ 需要调整比特分配
+[layer_30.self_attn.o_proj] MI分组比特分布: 4bit(256) 6bit(128) 8bit(4736) | 平均: 7.75 bits
+[layer_30.self_attn.o_proj] 时间: 5.34s | 误差: 19283.4023
+
+Processing layer_30.mlp.gate_proj (31/40) ...
+[layer_30.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_30.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_30.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_30.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_30.mlp.gate_proj] 时间: 5.59s | 误差: 639328.5000
+
+Processing layer_30.mlp.down_proj (31/40) ...
+[layer_30.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_30.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_30.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_30.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_30.mlp.down_proj] 时间: 25.43s | 误差: 72648.3281
+
+Processing layer_30.mlp.up_proj (31/40) ...
+[layer_30.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_30.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_30.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_30.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_30.mlp.up_proj] 时间: 5.60s | 误差: 551834.6250
+
+Processing layer_31.self_attn.q_proj (32/40) ...
+[layer_31.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_31.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_31.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_31.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_31.self_attn.q_proj] 时间: 5.62s | 误差: 390020.6875
+
+Processing layer_31.self_attn.k_proj (32/40) ...
+[layer_31.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_31.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_31.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_31.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_31.self_attn.k_proj] 时间: 5.67s | 误差: 395234.1250
+
+Processing layer_31.self_attn.v_proj (32/40) ...
+[layer_31.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_31.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_31.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_31.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_31.self_attn.v_proj] 时间: 5.61s | 误差: 346488.4688
+
+Processing layer_31.self_attn.o_proj (32/40) ...
+[layer_31.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_31.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_31.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.15 bits
+  ⚠ 需要调整比特分配
+[layer_31.self_attn.o_proj] MI分组比特分布: 6bit(2169) 8bit(2951) | 平均: 7.15 bits
+[layer_31.self_attn.o_proj] 时间: 5.43s | 误差: 17691.2188
+
+Processing layer_31.mlp.gate_proj (32/40) ...
+[layer_31.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_31.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_31.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_31.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_31.mlp.gate_proj] 时间: 6.17s | 误差: 668598.2500
+
+Processing layer_31.mlp.down_proj (32/40) ...
+[layer_31.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_31.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_31.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_31.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_31.mlp.down_proj] 时间: 25.82s | 误差: 76900.0234
+
+Processing layer_31.mlp.up_proj (32/40) ...
+[layer_31.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_31.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_31.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_31.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_31.mlp.up_proj] 时间: 5.88s | 误差: 580489.1250
+
+Processing layer_32.self_attn.q_proj (33/40) ...
+[layer_32.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_32.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_32.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_32.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_32.self_attn.q_proj] 时间: 5.80s | 误差: 403454.6250
+
+Processing layer_32.self_attn.k_proj (33/40) ...
+[layer_32.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_32.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_32.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_32.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_32.self_attn.k_proj] 时间: 5.87s | 误差: 401758.1562
+
+Processing layer_32.self_attn.v_proj (33/40) ...
+[layer_32.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_32.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_32.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_32.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_32.self_attn.v_proj] 时间: 5.68s | 误差: 404242.2500
+
+Processing layer_32.self_attn.o_proj (33/40) ...
+[layer_32.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_32.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_32.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.70 bits
+  ⚠ 需要调整比特分配
+[layer_32.self_attn.o_proj] MI分组比特分布: 6bit(3337) 8bit(1783) | 平均: 6.70 bits
+[layer_32.self_attn.o_proj] 时间: 5.57s | 误差: 20429.5117
+
+Processing layer_32.mlp.gate_proj (33/40) ...
+[layer_32.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_32.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_32.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_32.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_32.mlp.gate_proj] 时间: 5.81s | 误差: 694270.2500
+
+Processing layer_32.mlp.down_proj (33/40) ...
+[layer_32.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_32.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_32.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_32.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_32.mlp.down_proj] 时间: 26.45s | 误差: 82919.7188
+
+Processing layer_32.mlp.up_proj (33/40) ...
+[layer_32.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_32.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_32.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_32.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_32.mlp.up_proj] 时间: 5.79s | 误差: 611379.0625
+
+Processing layer_33.self_attn.q_proj (34/40) ...
+[layer_33.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_33.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_33.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_33.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_33.self_attn.q_proj] 时间: 5.81s | 误差: 379596.9375
+
+Processing layer_33.self_attn.k_proj (34/40) ...
+[layer_33.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_33.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_33.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_33.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_33.self_attn.k_proj] 时间: 5.85s | 误差: 382569.6562
+
+Processing layer_33.self_attn.v_proj (34/40) ...
+[layer_33.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_33.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_33.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_33.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_33.self_attn.v_proj] 时间: 5.77s | 误差: 362555.6562
+
+Processing layer_33.self_attn.o_proj (34/40) ...
+[layer_33.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_33.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_33.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.95 bits
+  ⚠ 需要调整比特分配
+[layer_33.self_attn.o_proj] MI分组比特分布: 6bit(128) 8bit(4992) | 平均: 7.95 bits
+[layer_33.self_attn.o_proj] 时间: 5.54s | 误差: 17751.1484
+
+Processing layer_33.mlp.gate_proj (34/40) ...
+[layer_33.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_33.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_33.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_33.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_33.mlp.gate_proj] 时间: 5.72s | 误差: 718096.0000
+
+Processing layer_33.mlp.down_proj (34/40) ...
+[layer_33.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_33.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_33.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_33.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_33.mlp.down_proj] 时间: 26.25s | 误差: 88482.2500
+
+Processing layer_33.mlp.up_proj (34/40) ...
+[layer_33.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_33.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_33.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_33.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_33.mlp.up_proj] 时间: 5.75s | 误差: 639433.8125
+
+Processing layer_34.self_attn.q_proj (35/40) ...
+[layer_34.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_34.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_34.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_34.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_34.self_attn.q_proj] 时间: 6.10s | 误差: 373334.4688
+
+Processing layer_34.self_attn.k_proj (35/40) ...
+[layer_34.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_34.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_34.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_34.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_34.self_attn.k_proj] 时间: 5.79s | 误差: 374190.8750
+
+Processing layer_34.self_attn.v_proj (35/40) ...
+[layer_34.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_34.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_34.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_34.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_34.self_attn.v_proj] 时间: 5.69s | 误差: 402322.6250
+
+Processing layer_34.self_attn.o_proj (35/40) ...
+[layer_34.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_34.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_34.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.18 bits
+  ⚠ 需要调整比特分配
+[layer_34.self_attn.o_proj] MI分组比特分布: 6bit(2111) 8bit(3009) | 平均: 7.18 bits
+[layer_34.self_attn.o_proj] 时间: 5.43s | 误差: 24690.9375
+
+Processing layer_34.mlp.gate_proj (35/40) ...
+[layer_34.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_34.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_34.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_34.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_34.mlp.gate_proj] 时间: 5.73s | 误差: 744144.1250
+
+Processing layer_34.mlp.down_proj (35/40) ...
+[layer_34.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_34.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_34.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_34.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_34.mlp.down_proj] 时间: 25.80s | 误差: 99624.0547
+
+Processing layer_34.mlp.up_proj (35/40) ...
+[layer_34.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_34.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_34.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_34.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_34.mlp.up_proj] 时间: 5.68s | 误差: 677408.6875
+
+Processing layer_35.self_attn.q_proj (36/40) ...
+[layer_35.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_35.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_35.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_35.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_35.self_attn.q_proj] 时间: 5.66s | 误差: 347691.0000
+
+Processing layer_35.self_attn.k_proj (36/40) ...
+[layer_35.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_35.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_35.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_35.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_35.self_attn.k_proj] 时间: 5.68s | 误差: 349360.1250
+
+Processing layer_35.self_attn.v_proj (36/40) ...
+[layer_35.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_35.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_35.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_35.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_35.self_attn.v_proj] 时间: 5.61s | 误差: 377726.0000
+
+Processing layer_35.self_attn.o_proj (36/40) ...
+[layer_35.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_35.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_35.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.34 bits
+  ⚠ 需要调整比特分配
+[layer_35.self_attn.o_proj] MI分组比特分布: 6bit(1680) 8bit(3440) | 平均: 7.34 bits
+[layer_35.self_attn.o_proj] 时间: 5.37s | 误差: 22271.4785
+
+Processing layer_35.mlp.gate_proj (36/40) ...
+[layer_35.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_35.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_35.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_35.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_35.mlp.gate_proj] 时间: 5.64s | 误差: 766199.5000
+
+Processing layer_35.mlp.down_proj (36/40) ...
+[layer_35.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_35.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_35.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_35.mlp.down_proj] MI分组比特分布: 8bit(13824) | 平均: 8.00 bits
+[layer_35.mlp.down_proj] 时间: 25.92s | 误差: 111478.5078
+
+Processing layer_35.mlp.up_proj (36/40) ...
+[layer_35.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_35.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_35.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_35.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_35.mlp.up_proj] 时间: 5.64s | 误差: 714050.7500
+
+Processing layer_36.self_attn.q_proj (37/40) ...
+[layer_36.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_36.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_36.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_36.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_36.self_attn.q_proj] 时间: 5.68s | 误差: 334475.7812
+
+Processing layer_36.self_attn.k_proj (37/40) ...
+[layer_36.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_36.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_36.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_36.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_36.self_attn.k_proj] 时间: 5.61s | 误差: 338148.3125
+
+Processing layer_36.self_attn.v_proj (37/40) ...
+[layer_36.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_36.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_36.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_36.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_36.self_attn.v_proj] 时间: 5.62s | 误差: 366817.9375
+
+Processing layer_36.self_attn.o_proj (37/40) ...
+[layer_36.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_36.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_36.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.37 bits
+  ⚠ 需要调整比特分配
+[layer_36.self_attn.o_proj] MI分组比特分布: 6bit(1601) 8bit(3519) | 平均: 7.37 bits
+[layer_36.self_attn.o_proj] 时间: 5.38s | 误差: 35030.0859
+
+Processing layer_36.mlp.gate_proj (37/40) ...
+[layer_36.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_36.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_36.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_36.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_36.mlp.gate_proj] 时间: 5.73s | 误差: 780897.0000
+
+Processing layer_36.mlp.down_proj (37/40) ...
+[layer_36.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_36.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_36.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.39 bits
+  ⚠ 需要调整比特分配
+[layer_36.mlp.down_proj] MI分组比特分布: 6bit(11134) 8bit(2690) | 平均: 6.39 bits
+[layer_36.mlp.down_proj] 时间: 25.93s | 误差: 126157.4375
+
+Processing layer_36.mlp.up_proj (37/40) ...
+[layer_36.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_36.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_36.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_36.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_36.mlp.up_proj] 时间: 5.62s | 误差: 740507.8750
+
+Processing layer_37.self_attn.q_proj (38/40) ...
+[layer_37.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_37.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_37.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_37.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_37.self_attn.q_proj] 时间: 5.59s | 误差: 278284.5000
+
+Processing layer_37.self_attn.k_proj (38/40) ...
+[layer_37.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_37.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_37.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_37.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_37.self_attn.k_proj] 时间: 5.54s | 误差: 273208.9375
+
+Processing layer_37.self_attn.v_proj (38/40) ...
+[layer_37.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_37.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_37.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_37.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_37.self_attn.v_proj] 时间: 5.58s | 误差: 360533.2188
+
+Processing layer_37.self_attn.o_proj (38/40) ...
+[layer_37.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_37.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_37.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.57 bits
+  ⚠ 需要调整比特分配
+[layer_37.self_attn.o_proj] MI分组比特分布: 3bit(127) 4bit(386) 8bit(4607) | 平均: 7.57 bits
+[layer_37.self_attn.o_proj] 时间: 5.37s | 误差: 30829.3047
+
+Processing layer_37.mlp.gate_proj (38/40) ...
+[layer_37.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_37.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_37.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_37.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_37.mlp.gate_proj] 时间: 5.48s | 误差: 759785.8750
+
+Processing layer_37.mlp.down_proj (38/40) ...
+[layer_37.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_37.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_37.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.41 bits
+  ⚠ 需要调整比特分配
+[layer_37.mlp.down_proj] MI分组比特分布: 6bit(11006) 8bit(2818) | 平均: 6.41 bits
+[layer_37.mlp.down_proj] 时间: 26.48s | 误差: 130714.6094
+
+Processing layer_37.mlp.up_proj (38/40) ...
+[layer_37.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_37.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_37.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_37.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_37.mlp.up_proj] 时间: 5.46s | 误差: 725992.1875
+
+Processing layer_38.self_attn.q_proj (39/40) ...
+[layer_38.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_38.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_38.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_38.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_38.self_attn.q_proj] 时间: 5.46s | 误差: 264768.3750
+
+Processing layer_38.self_attn.k_proj (39/40) ...
+[layer_38.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_38.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_38.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_38.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_38.self_attn.k_proj] 时间: 5.55s | 误差: 262168.8750
+
+Processing layer_38.self_attn.v_proj (39/40) ...
+[layer_38.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_38.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_38.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_38.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_38.self_attn.v_proj] 时间: 5.49s | 误差: 385451.3125
+
+Processing layer_38.self_attn.o_proj (39/40) ...
+[layer_38.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_38.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_38.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.36 bits
+  ⚠ 需要调整比特分配
+[layer_38.self_attn.o_proj] MI分组比特分布: 4bit(685) 6bit(257) 8bit(4178) | 平均: 7.36 bits
+[layer_38.self_attn.o_proj] 时间: 5.57s | 误差: 39190.4688
+
+Processing layer_38.mlp.gate_proj (39/40) ...
+[layer_38.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_38.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_38.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_38.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_38.mlp.gate_proj] 时间: 5.51s | 误差: 749275.5000
+
+Processing layer_38.mlp.down_proj (39/40) ...
+[layer_38.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_38.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_38.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.54 bits
+  ⚠ 需要调整比特分配
+[layer_38.mlp.down_proj] MI分组比特分布: 6bit(10101) 8bit(3723) | 平均: 6.54 bits
+[layer_38.mlp.down_proj] 时间: 25.81s | 误差: 144638.9062
+
+Processing layer_38.mlp.up_proj (39/40) ...
+[layer_38.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+Token indices sequence length is longer than the specified maximum sequence length for this model (2699149 > 4096). Running this sequence through the model will result in indexing errors
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Reusing dataset ptb_text_only (/home/user/.cache/huggingface/datasets/ptb_text_only/penn_treebank/1.1.0/8d1b97746fb9765d140e569ec5ddd35e20af4d37761f5e1bf357ea0b081f2c1f)
+Token indices sequence length is longer than the specified maximum sequence length for this model (1195302 > 4096). Running this sequence through the model will result in indexing errors
+Token indices sequence length is longer than the specified maximum sequence length for this model (4430 > 4096). Running this sequence through the model will result in indexing errors
+  NMI范围: [0.0000, 0.9999]
+[layer_38.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_38.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_38.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_38.mlp.up_proj] 时间: 5.56s | 误差: 688282.7500
+
+Processing layer_39.self_attn.q_proj (40/40) ...
+[layer_39.self_attn.q_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_39.self_attn.q_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_39.self_attn.q_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_39.self_attn.q_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_39.self_attn.q_proj] 时间: 5.54s | 误差: 224161.4531
+
+Processing layer_39.self_attn.k_proj (40/40) ...
+[layer_39.self_attn.k_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_39.self_attn.k_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_39.self_attn.k_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_39.self_attn.k_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_39.self_attn.k_proj] 时间: 5.50s | 误差: 221058.4375
+
+Processing layer_39.self_attn.v_proj (40/40) ...
+[layer_39.self_attn.v_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_39.self_attn.v_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_39.self_attn.v_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_39.self_attn.v_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_39.self_attn.v_proj] 时间: 5.54s | 误差: 262190.5000
+
+Processing layer_39.self_attn.o_proj (40/40) ...
+[layer_39.self_attn.o_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_39.self_attn.o_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_39.self_attn.o_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 7.82 bits
+  ⚠ 需要调整比特分配
+[layer_39.self_attn.o_proj] MI分组比特分布: 3bit(110) 6bit(186) 8bit(4824) | 平均: 7.82 bits
+[layer_39.self_attn.o_proj] 时间: 5.38s | 误差: 51834.8164
+
+Processing layer_39.mlp.gate_proj (40/40) ...
+[layer_39.mlp.gate_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_39.mlp.gate_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_39.mlp.gate_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_39.mlp.gate_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_39.mlp.gate_proj] 时间: 5.62s | 误差: 608521.9375
+
+Processing layer_39.mlp.down_proj (40/40) ...
+[layer_39.mlp.down_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 13824 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_39.mlp.down_proj] 进行通道分组 (5 组)...
+开始通道分组: 13824 通道 → 5 组
+无法计算Silhouette Score
+[layer_39.mlp.down_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 6.98 bits
+  ⚠ 需要调整比特分配
+[layer_39.mlp.down_proj] MI分组比特分布: 6bit(7041) 8bit(6783) | 平均: 6.98 bits
+[layer_39.mlp.down_proj] 时间: 25.59s | 误差: 146431.8906
+
+Processing layer_39.mlp.up_proj (40/40) ...
+[layer_39.mlp.up_proj] 计算互信息矩阵...
+快速计算互信息矩阵（相关系数法）: 5120 通道
+互信息矩阵计算完成（快速模式）
+  MI范围: [-0.0000, 4.2586]
+  NMI范围: [0.0000, 0.9999]
+[layer_39.mlp.up_proj] 进行通道分组 (5 组)...
+开始通道分组: 5120 通道 → 5 组
+无法计算Silhouette Score
+[layer_39.mlp.up_proj] 为分组分配比特数...
+
+比特分配:
+  目标平均: 4.00 bits
+  当前平均: 8.00 bits
+  ⚠ 需要调整比特分配
+[layer_39.mlp.up_proj] MI分组比特分布: 8bit(5120) | 平均: 8.00 bits
+[layer_39.mlp.up_proj] 时间: 5.51s | 误差: 534596.0625
+
+======================================================================
+互信息量化统计摘要 (MI-based Quantization Statistics)
+======================================================================
+
+总通道数: 1781760
+
+比特分布:
+  3-bit:    237 通道 ( 0.01%)
+  4-bit:  16682 通道 ( 0.94%)
+  6-bit: 102833 通道 ( 5.77%)
+  8-bit: 1662008 通道 (93.28%)
+
+平均比特数: 7.876 bits
+平均分组数: 5.0 groups/layer
+
+分组详情 (前3层):
+
+  layer_0.self_attn.q_proj: 5 组
+    组0: 549通道, 8bit
+    组1: 517通道, 8bit
+    组2: 687通道, 4bit
+    组3: 2735通道, 4bit
+    组4: 632通道, 4bit
+
+  layer_0.self_attn.k_proj: 5 组
+    组0: 549通道, 8bit
+    组1: 517通道, 8bit
+    组2: 687通道, 4bit
+    组3: 2735通道, 4bit
+    组4: 632通道, 4bit
+
+  layer_0.self_attn.v_proj: 5 组
+    组0: 549通道, 8bit
+    组1: 517通道, 8bit
+    组2: 687通道, 4bit
+    组3: 2735通道, 4bit
+    组4: 632通道, 4bit
+======================================================================
+
+Total time: 2532.99s
+
+Evaluating on wikitext2 ...
+Evaluating ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Evaluating layer 12
+Evaluating layer 13
+Evaluating layer 14
+Evaluating layer 15
+Evaluating layer 16
+Evaluating layer 17
+Evaluating layer 18
+Evaluating layer 19
+Evaluating layer 20
+Evaluating layer 21
+Evaluating layer 22
+Evaluating layer 23
+Evaluating layer 24
+Evaluating layer 25
+Evaluating layer 26
+Evaluating layer 27
+Evaluating layer 28
+Evaluating layer 29
+Evaluating layer 30
+Evaluating layer 31
+Evaluating layer 32
+Evaluating layer 33
+Evaluating layer 34
+Evaluating layer 35
+Evaluating layer 36
+Evaluating layer 37
+Evaluating layer 38
+Evaluating layer 39
+Perplexity: 7.17
+Perplexity on wikitext2: 7.166
+
+Evaluating on ptb ...
+Evaluating ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Evaluating layer 12
+Evaluating layer 13
+Evaluating layer 14
+Evaluating layer 15
+Evaluating layer 16
+Evaluating layer 17
+Evaluating layer 18
+Evaluating layer 19
+Evaluating layer 20
+Evaluating layer 21
+Evaluating layer 22
+Evaluating layer 23
+Evaluating layer 24
+Evaluating layer 25
+Evaluating layer 26
+Evaluating layer 27
+Evaluating layer 28
+Evaluating layer 29
+Evaluating layer 30
+Evaluating layer 31
+Evaluating layer 32
+Evaluating layer 33
+Evaluating layer 34
+Evaluating layer 35
+Evaluating layer 36
+Evaluating layer 37
+Evaluating layer 38
+Evaluating layer 39
+Perplexity: 73.87
+Perplexity on ptb: 73.874
+
+Evaluating on c4 ...
+Evaluating ...
+Evaluating layer 0
+Evaluating layer 1
+Evaluating layer 2
+Evaluating layer 3
+Evaluating layer 4
+Evaluating layer 5
+Evaluating layer 6
+Evaluating layer 7
+Evaluating layer 8
+Evaluating layer 9
+Evaluating layer 10
+Evaluating layer 11
+Evaluating layer 12
+Evaluating layer 13
+Evaluating layer 14
+Evaluating layer 15
+Evaluating layer 16
+Evaluating layer 17
+Evaluating layer 18
+Evaluating layer 19
+Evaluating layer 20
+Evaluating layer 21
+Evaluating layer 22
+Evaluating layer 23
+Evaluating layer 24
+Evaluating layer 25
+Evaluating layer 26
+Evaluating layer 27
+Evaluating layer 28
+Evaluating layer 29
+Evaluating layer 30
+Evaluating layer 31
+Evaluating layer 32
+Evaluating layer 33
+Evaluating layer 34
+Evaluating layer 35
+Evaluating layer 36
+Evaluating layer 37
+Evaluating layer 38
+Evaluating layer 39
+Perplexity: 10.29
+Perplexity on c4: 10.289
